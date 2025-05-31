@@ -83,7 +83,7 @@ focused_settings = {
 ## Known Limitations
 
 1. **Model Size Trade-offs**: Being smaller models, they may not match the capabilities of larger language models for complex tasks.
-2. **Base Model Influence**: While largely aligned for animal advocacy, the base model weights remain largely unchanged due to LoRA fine-tuning, which can lead to edge cases where the models will act in unaligned ways, such as recommending nonvegan products. To address this, we recommend explicitly addressing animal alignment in the system message using the prompt given above.
+2. **Base Model Influence**: While largely aligned for animal advocacy, there are edge cases where the models will act in unaligned ways, such as recommending nonvegan products. To address this, we recommend explicitly addressing animal alignment in the system message.
 3. **User Context Awareness**: These models perform best when given clear contextual information about the user and their goals. For example, if engaging with a vegetarian considering veganism, the system prompt should explain that the model should provide supportive and practical guidance on eliminating dairy and eggs, suggesting suitable replacements, and addressing common concerns such as nutrition and meal planning. Ensuring prompts contain user context and developer intentions will maximize alignment with advocacy goals.
 
 ## Additional Resources
