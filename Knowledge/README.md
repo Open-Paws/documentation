@@ -115,19 +115,7 @@ for group in response.groups:
     print(f"Type: {group.grouped_by.value} Count: {group.total_count}")
 ```
 
-## 4. Available Collections
-
-Our database includes the following collections:
-- `Content`: Central repository for advocacy materials
-- `Individual`: Data on people in the movement
-- `Group`: Organization and coalition data
-- `Event`: Advocacy event tracking
-- `Location`: Geographic context linking
-- `Language`: Multilingual support
-
-See the documentation on our [data structure](https://github.com/Open-Paws/Open_Paws_Documentation/blob/main/Knowledge/Data_Structure.md) for full details.
-
-## 5. Best Practices
+## 4. Best Practices
 
 1. Use hybrid search for optimal retrieval
 2. Leverage filters to narrow results
