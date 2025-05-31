@@ -4,8 +4,6 @@ This repository contains a collection of ready-to-use JSON workflows for [n8n](h
 
 These workflows are designed to save time, boost impact, and empower advocates through streamlined automation.
 
----
-
 ## 🚀 Getting Started
 
 ### 1. Set Up n8n
@@ -27,21 +25,15 @@ Choose a deployment method:
 
 For setup instructions, see the [n8n docs](https://docs.n8n.io/hosting/overview/).
 
----
-
 ### 2. Import a Workflow
 
 - In the n8n editor UI, click the **menu icon** → **Import from File**
 - Upload the `.json` file from this repository
 - Customize nodes (e.g. add your credentials or tweak filters)
 
----
-
 ### 3. Activate & Automate!
 
 Once configured, you can activate workflows to run manually, on a schedule, or via triggers (like webhooks, form entries, RSS updates, etc.).
-
----
 
 ## 🤝 Contributing
 
