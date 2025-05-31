@@ -16,10 +16,15 @@ Documentation for our performance and preference prediction models:
 
 - [Overview & Quick Start](Predictions/README.md)
 
-### 🤖 Specialized Generative AI Models
+### 💬 Specialized Generative AI Models
 Documentation for our specialized generative AI models:
 
 - [Overview & Quick Start](Generation/README.md)
+
+### 🤖 n8n Workflow Automations
+Documentation and example workflows using n8n to automate advocacy tasks.
+
+- [Overview & Quick Start](Automation/README.md)
 
 ## Datasets
 Use our HuggingFace datasets for fine-tuning your own generative AI models:
