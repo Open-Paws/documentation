@@ -18,7 +18,7 @@ Choose a deployment method:
 
 - **n8n Cloud**  
   Official managed hosting by the n8n team — easiest to get started, but more expensive over time.  
-  👉 [https://n8n.io/n8n-cloud](https://n8n.io/n8n-cloud/)
+  👉 [https://n8n.io/](https://n8n.io/)
 
 - **Self-hosted (DIY) Options**
   - **Local Install:** via `npm` or native app
