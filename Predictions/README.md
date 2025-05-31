@@ -88,18 +88,4 @@ for text, result in zip(texts, results):
     print(f"Text: {text}\nClipped Score: {score}\n")
 ```
 
-## Available Models on Hugging Face
-
-### Core Models
-- [Animal Advocate Preference Prediction](https://huggingface.co/open-paws/animal_advocate_preference_prediction)
-- [Text Performance Prediction](https://huggingface.co/open-paws/text_performance_prediction)
-
-### Specific Metric Models
-- [Potential Influence Prediction](https://huggingface.co/open-paws/potential_influence_prediction)
-- [Level of Rationality Prediction](https://huggingface.co/open-paws/level_of_rationality_prediction)
-- [Emotional Impact Prediction](https://huggingface.co/open-paws/emotional_impact_prediction)
-- [Perceived Trustworthiness Prediction](https://huggingface.co/open-paws/perceived_trustworthiness_prediction)
-- [Perceived Insightfulness Prediction](https://huggingface.co/open-paws/perceived_insightfulness_prediction)
-- [Perceived Insightfulness Prediction](https://huggingface.co/open-paws/perceived_insightfulness_prediction)
-- [Cultural Sensitivity Prediction](https://huggingface.co/open-paws/cultural_sensitivity_prediction)
-- [Effect on Animals Prediction](https://huggingface.co/open-paws/effect_on_animals_prediction)
+## [Available Models on Hugging Face](https://huggingface.co/collections/open-paws/ranking-models-67b94c024535b84d0b73648b)
