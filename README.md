@@ -17,7 +17,7 @@ Documentation for our performance and preference prediction models:
 - [Overview & Quick Start](Predictions/README.md)
 
 ### 🤖 Specialized Generative AI Models
-Documentation for our specialized generative AI models, including Large Language Models (LLMs) and Visual Language Models (VLMs):
+Documentation for our specialized generative AI models:
 
 - [Overview & Quick Start](Generation/README.md)
 
