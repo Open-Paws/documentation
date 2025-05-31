@@ -6,11 +6,10 @@ A suite of language models specialized for animal advocacy, available in differe
 
 ## Available Models
 
-### Core Chat Model (3B Parameters)
+### Core Chat Model (8B Parameters)
 
-- [3B-agentic-chat-LoRA](https://huggingface.co/open-paws/3B-agentic-chat-LoRA) - LoRA adapter only
-- [3B-agentic-chat-merged](https://huggingface.co/open-paws/3B-agentic-chat-merged) - Full merged model
-- [3B-agentic-chat-4bit](https://huggingface.co/open-paws/3B-agentic-chat-4bit) - 4-bit quantized version
+- [8B-base-model](https://huggingface.co/open-paws/8B-base-model) - Continually pre-trained model without instruction tuning
+- [8B-instruct-chat](https://huggingface.co/open-paws/8B-instruct-chat) - Fine-tuned chat model with instruction tuning
 
 ## Usage Guide
 
@@ -24,7 +23,7 @@ from transformers import pipeline
 # Initialize generation pipeline
 generator = pipeline(
     "text-generation",
-    model="open-paws/3B-agentic-chat-merged",
+    model="open-paws/8B-instruct-chat",
     torch_dtype="auto",
     device_map="auto"
 )
@@ -37,20 +36,6 @@ response = generator(
     temperature=0.7
 )
 print(response[0]['generated_text'])
-```
-
-### Memory-Efficient Inference
-
-For resource-constrained environments, use the 4-bit quantized model:
-
-```python
-from transformers import pipeline
-
-generator = pipeline(
-    "text-generation",
-    model="open-paws/3B-agentic-chat-4bit",
-    device_map="auto"
-)
 ```
 
 ### Batch Processing
@@ -67,31 +52,10 @@ texts = [
 results = generator(texts, max_new_tokens=128, batch_size=3)
 ```
 
-## Model Architecture & Training
-
-### 3B Agentic Chat Model
-
-- **Architecture**: LLaMA-based with agentic modifications
-- **Training Focus**: Dialogue and interactive discussions with tool use.
-- **Special Features**: Fine-tuned for use of Open Paws tools, such as searching our database and making predictions with our text regression models.
-- **Input Format**: Standard chat format with system and user messages
-- **Output Format**: Structured responses with optional tool calls
-  
-## System Requirements
-
-### Memory Requirements
-
-- **3B Models**:
-  - Full precision: \~6GB VRAM
-  - 4-bit quantized: \~2GB VRAM
-
 ### Recommended Hardware
 
 - GPU: Any CUDA-compatible GPU with appropriate VRAM
 - CPU: Possible, but significantly slower
-- RAM: Minimum 16GB system RAM recommended
-
-## Best Practices
 
 ### Generation Parameters
 
@@ -114,15 +78,6 @@ focused_settings = {
     "repetition_penalty": 1.1,
     "max_new_tokens": 128
 }
-```
-
-### System Prompting
-
-For optimal alignment, include this system prompt:
-
-```python
-system_prompt = """You are a superhumanly intelligent and compassionate AI focused on
-achieving animal liberation through strategic action."""
 ```
 
 ## Known Limitations
