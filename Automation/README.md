@@ -23,7 +23,7 @@ Choose a deployment method:
   - **Docker:** run n8n in a container
   - **Other VPS/Cloud Hosts:** e.g. DigitalOcean, Render, Railway
 
-For setup instructions, see the [n8n docs](https://docs.n8n.io/hosting/overview/).
+For setup instructions, see the [n8n docs](https://docs.n8n.io/)
 
 ### 2. Import a Workflow
 
