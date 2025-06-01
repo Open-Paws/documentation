@@ -1,0 +1,239 @@
+{
+  "name": "Prospect Research",
+  "nodes": [
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "Prospect Name"
+            },
+            {
+              "name": "Prospect Linkedin URL"
+            },
+            {
+              "name": "Prospect Twitter URL"
+            },
+            {
+              "name": "Prospect Instagram URL"
+            },
+            {
+              "name": "Outreach Goal"
+            },
+            {
+              "name": "Prospector Name"
+            },
+            {
+              "name": "Prospector Linkedin URL"
+            },
+            {
+              "name": "Prospector Twitter URL"
+            },
+            {
+              "name": "Prospector Instagram URL"
+            },
+            {
+              "name": "Email"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -620,
+        -820
+      ],
+      "id": "27456bb4-86e4-4c19-bbd6-a028b0114c67",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "model": "anthropic/claude-sonnet-4",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        -200,
+        -620
+      ],
+      "id": "29e13b2f-4339-4c47-935f-b769478cec68",
+      "name": "OpenRouter Chat Model1",
+      "credentials": {
+        "openRouterApi": {
+          "id": "QqgKARn52qQiKICN",
+          "name": "OpenRouter account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=CRITICAL OUTPUT INSTRUCTIONS — READ CAREFULLY\n\n1. Your response must begin immediately with valid HTML.\nDo not include any markdown formatting (e.g., no ```html), backticks, or explanations. The first line of your response must be a raw HTML element like <html>, <div>, or <h1>.\n\n2. Format the merged research report as clean, professional, and well-structured HTML.\nUse semantic HTML tags (e.g., <h1> to <h3>, <p>, <ul>, <table>, <a>, etc.).\nMake it visually scannable and useful to a prospector preparing for outreach. Emphasize clarity, logical flow, and readability.\n\n3. Preserve and properly format ALL citations.\nEvery citation or external reference must be presented as a clickable URL (<a href> tag) AND must include the full visible text of the URL itself.\n\n4. Merge the following sources into one cohesive report:\n\n    {{ $json.output }}\n\n    You may restructure, rephrase, and reorder content if needed to improve clarity or logical flow.\n\nFINAL PURPOSE:\n\nYou are writing this report for the prospector who is preparing to reach out to the prospect. The goal is to provide all relevant background information to support a warm, personalized outreach strategy.\nYou may highlight opportunities where the prospector could meaningfully connect with the prospect (e.g., shared experiences, people, or interests), but you should not include any background details about the prospector unless it helps achieve this goal.\n\nMake the final report easy to skim, actionable, and professional in tone."
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.5,
+      "position": [
+        -180,
+        -820
+      ],
+      "id": "6f65089e-0a22-4352-9f9f-b2a4fa089149",
+      "name": "Report Writer",
+      "retryOnFail": true,
+      "waitBetweenTries": 2500
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "k053fXGjIF7dUIQZ",
+          "mode": "list",
+          "cachedResultName": "General Tools Agent"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "chatInput": "=# TASK OVERVIEW\n\nYour task is to extract as much information as possible about both the prospect and myself. You MUST use all available tools to their fullest extent. The more information you extract, the better.\n\nThe prospect I am trying to get connected with is {{ $('When Executed by Another Workflow').item.json['Prospect Name'] }} and I am {{ $('When Executed by Another Workflow').item.json['Prospector Name'] }}.\n\nMy goal of connecting with this person is as follows: {{ $('When Executed by Another Workflow').item.json['Outreach Goal'] }}\n\n# MY SOCIAL MEDIA ACCOUNTS\n\n{{ $json['Prospector Linkedin URL'] }}\n\n{{ $json['Prospector Twitter URL'] }}\n\n{{ $json['Prospector Instagram URL'] }}\n\n# THE PROSPECTS SOCIAL MEDIA ACCOUNTS\n\n{{ $json['Prospect Linkedin URL'] }}\n\n{{ $json['Prospect Twitter URL'] }}\n\n{{ $json['Prospect Instagram URL'] }}\n\n# INSTRUCTIONS\n\n*   Be Thorough: The report should be as comprehensive as possible. Leave no stone unturned.\n*   Be Objective: Present information in a neutral and unbiased manner.\n*   Focus on the Goal: All research and analysis should be directly relevant to extracting information about the prospect and myself and connecting us to achieve my specified goal.\n*   Prioritize Finding Mutual Connections: Place a strong emphasis on finding specific details about shared connections, interests, demographics, psychographics, relationships and events.\n*   If you do not have enough information to achieve the goal, state what additional information is needed, specifying whether the missing information pertains to the prospect or myself.\n* Provide inline citations with the URL directly after any factual claim in the report. It's not enough to just include a reference to a footnot, you must include the actual URL within the text itself.\n\nRESPONSE LENGTH: You should aim to provide the longest possible response, including as many relevant details and sources of information as possible. However, the length of your response should be maximized through the inclusion of RELEVANT information, not through the addition of fluff or filler content. Focus on providing as much valuable information as possible in a clear and concise manner.\n\n# SPECIFIC TYPES OF CONTENT TO LOOK FOR:\n\n  *News articles\n  *Blog posts\n  *Company websites\n  *Conference presentations\n  *Podcast appearances\n  *Social media mentions\n  *Shared Events: Evidence that the prospect and I have attended the same events or conferences.\n  *Educational Background:\n  *Shared Schools/Universities: Attendance at the same universities, colleges, or even high schools.\n  *Specific Programs/Departments: Enrollment in the same department or program.\n  *Professors/Mentors: Shared influential professors or mentors.\n  *Thesis/Dissertation Topics: Overlap in research areas or topics.\n  *Geographic Location (Past & Present):\n  *Hometowns: Shared hometown or region.\n  *Previous Residences: Shared cities or neighborhoods.\n  *Professional Associations & Memberships:\n  *Industry-Specific Groups: Membership in the same professional associations or trade groups.\n  *Local Chapters: Involvement in the same local chapters.\n  *Shared Volunteer Experience: Volunteering for the same organizations or causes.\n  *Related Groups/Clubs: Membership in the same online or offline groups/clubs.\n  *Anything else that might help find mutual contacts I share with the prospect or any other ways I could get a warm introduction.\n\nYour goal is to create a comprehensive profile of both the prospect and myself, with a particular emphasis on identifying shared contacts and connections with the goal of getting a warm introduction. The more information you extract, the better.\n\n# IMPORTANT\n\nRemember to include every single URL you find both as an inline citation and in a dedicated citation at the end of your report.\n\nThat means literally write out the URL in full, don't merely use your standard citation process, you actually need to include it as text in the main body of the report.\n\nYour final answer should be the report and the report only, do not include any other thinking steps or preamble in the final answer, just go straight into the report.",
+            "sessionId": "={{ (Math.random().toString(36).substring(2) + Date.now().toString(36)) }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "chatInput",
+              "displayName": "chatInput",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "sessionId",
+              "displayName": "sessionId",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        -400,
+        -820
+      ],
+      "id": "1fc40229-1cd9-4f4f-9a99-a760a373d9eb",
+      "name": "Call Research Agent"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('When Executed by Another Workflow').item.json.Email }}",
+        "subject": "={{ $('When Executed by Another Workflow').item.json['Prospect Name'] }} & {{ $('When Executed by Another Workflow').item.json['Prospector Name'] }}: Mutual Connections Report",
+        "message": "={{ $('Report Writer').item.json.text }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        180,
+        -820
+      ],
+      "id": "e9200264-c7e8-4f18-af7e-71d2d1f2d029",
+      "name": "Send Report",
+      "webhookId": "9d0cbd32-4fdd-43d7-b996-aee53124f5ac",
+      "retryOnFail": true,
+      "waitBetweenTries": 2500,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "McQ0450TTh9HyfO1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Connect credentials and \"general tools agent\" workflow\nConnect your Gmail credentials, your OpenRouter API key and ensure you have imported the following workflow to your n8n instance: https://github.com/Open-Paws/Open-Paws-Documentation/blob/main/Automation/General_Tools_Agent.json\n\nThen, connect the \"Call Research Agent\" node to the newly imported workflow.",
+        "width": 820
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -580,
+        -1040
+      ],
+      "typeVersion": 1,
+      "id": "9c75d291-b6d5-4f4a-8076-24df8cc63ff0",
+      "name": "Sticky Note"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "Call Research Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Report Writer",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Report Writer": {
+      "main": [
+        [
+          {
+            "node": "Send Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Research Agent": {
+      "main": [
+        [
+          {
+            "node": "Report Writer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Report": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "15acee4a-e689-41c9-9c86-64441a9a8ab5",
+  "meta": {
+    "instanceId": "26bd595441827fb23edb0643d6d240e79b0b8993d278e90950f16e18bf9e3c4a"
+  },
+  "id": "6qo2GiBBPCMMBygR",
+  "tags": []
+}
