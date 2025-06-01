@@ -1,0 +1,285 @@
+{
+  "name": "Personalised Updates",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtHour": 12
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        400,
+        -80
+      ],
+      "id": "7f4c993f-547a-4c13-99a5-586096ca0b39",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "model": "anthropic/claude-sonnet-4",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        1440,
+        100
+      ],
+      "id": "60ec5710-4ee3-4712-93e9-ae8c4aa184ad",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "43LqHQAE4FT0lExM",
+          "name": "OpenRouter account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "k053fXGjIF7dUIQZ",
+          "mode": "list",
+          "cachedResultName": "General Tools Agent"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "sessionId": "={{ (Math.random().toString(36).substring(2) + Date.now().toString(36)) }}",
+            "chatInput": "=Your job is to research news and updates strictly from the past week only using Serper API, you must use the time parameter to ensure you only find articles from the past week, as show below:\n\n\"tbs\": \"qdr:w\" (past week)\n\nYou are searching for news and articles on the following topics, but only as they relate to animal rights, animal welfare, vegetarianism and veganism:\n\n{{ $json.Topics }}\n\nAlso consider the additional context of the user's instructions for the type of information they want you to find:\n\n{{ $json.Instructions }}\n\nYour final answer should be as long and detailed possible, including all the direct URLs you find. Ensure you make multiple API calls to Serper and use your text and url scraping tools to gain additional information from the sites you find (note that not all sites allow crawling, so if there is a failure to scrape a website it does not mean that the tool is broken, just that the specific domain cannot be scraped)"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "chatInput",
+              "displayName": "chatInput",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "sessionId",
+              "displayName": "sessionId",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        1040,
+        -80
+      ],
+      "id": "33624e4a-f6f1-417a-b4d9-52c12c417b5a",
+      "name": "Call Research Agent",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Write an HTML formatted report on the latest updates relevant to the user based on the context provided and the user's request. Ensure that you include hyperlinks to all citations.\n\nUser topics interested in:\n\n{{ $('Set Preferences').item.json.Topics }}\n\nUser instructions:\n\n{{ $('Set Preferences').item.json.Instructions }}\n\nContext:\n\n{{ $json.output }}\n\nEXTREMELY IMPORTANT: Your response has to enitrely be HTML code and start directly with <!DOCTYPE html>, do not include any backticks or mark it is a code block, just return the raw html beginning with <!DOCTYPE html>",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        1460,
+        -80
+      ],
+      "id": "75bc4731-ac77-4cd9-8a62-e2b316e4da89",
+      "name": "Write HTML Report",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "3cce9eb8-cc6f-42d3-b2dd-55d4a5e90f97",
+              "name": "Email",
+              "value": "Enter the address you want your updates sent to",
+              "type": "string"
+            },
+            {
+              "id": "0a57daa2-c669-4f39-9b39-cdfb0419e064",
+              "name": "Topics",
+              "value": "Enter a comma seperated list of the topics you want to be updated on",
+              "type": "string"
+            },
+            {
+              "id": "270f7218-30f2-4c83-bfe5-50685578287d",
+              "name": "Instructions",
+              "value": "Add additional instructions for what you want included in your report",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        580,
+        -80
+      ],
+      "id": "558e002f-c973-413b-95ec-7daebde9ba42",
+      "name": "Set Preferences"
+    },
+    {
+      "parameters": {
+        "content": "## Set your preferences first\nUse the \"set preferences\" node to select the topics you want to follow, custom instructions for how to create the report and the email you want the report sent to.",
+        "width": 320
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        380,
+        -280
+      ],
+      "typeVersion": 1,
+      "id": "3b15e826-82e3-4b1e-ba33-cbd5ade3e44b",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "## Use the \"General Tools Agent\" workflow \nFirst, make sure you've imported the following workflow to your n8n instance: https://github.com/Open-Paws/Open-Paws-Documentation/blob/main/Automation/General_Tools_Agent.json\n\nThen, connect the \"call research agent\" step to this workflow within your instance",
+        "width": 580
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        800,
+        -280
+      ],
+      "typeVersion": 1,
+      "id": "67fc2c2a-eda8-4cee-9b6f-2d3c0b806319",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Set Preferences').item.json.Email }}",
+        "subject": "Your Personalised Weekly Update",
+        "message": "={{ $json.text }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1800,
+        -80
+      ],
+      "id": "ff5dd0f9-0526-4631-91c2-cab603305bae",
+      "name": "Send Report",
+      "webhookId": "3f04fb74-8173-4ee0-9b22-4eba58a184dc",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "McQ0450TTh9HyfO1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Write and send report\nConnect your own OpenRouter account and choose your favourite LLM to write the report, then connect your Gmail credentials to send the report once completed. ",
+        "width": 440
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1460,
+        -280
+      ],
+      "typeVersion": 1,
+      "id": "bfc20264-b398-4789-830d-d4ba382d5533",
+      "name": "Sticky Note2"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Set Preferences",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Write HTML Report",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Research Agent": {
+      "main": [
+        [
+          {
+            "node": "Write HTML Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write HTML Report": {
+      "main": [
+        [
+          {
+            "node": "Send Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Preferences": {
+      "main": [
+        [
+          {
+            "node": "Call Research Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "241803e5-5c12-4970-afc0-e73ad9c2f597",
+  "meta": {
+    "instanceId": "26bd595441827fb23edb0643d6d240e79b0b8993d278e90950f16e18bf9e3c4a"
+  },
+  "id": "6qo2GiBBPCMMBygR",
+  "tags": []
+}
