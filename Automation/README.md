@@ -19,9 +19,9 @@ Choose a deployment method:
   👉 [https://n8n.io/](https://n8n.io/)
 
 - **Self-hosted (DIY) Options**
-  - **Local Install:** via `npm` or native app
+  - **Local Install:** via the official [self-hosted AI starter kit](https://github.com/n8n-io/self-hosted-ai-starter-kit) from n8n
   - **Docker:** run n8n in a container
-  - **Other VPS/Cloud Hosts:** e.g. DigitalOcean, Render, Railway
+  - **Other VPS/Cloud Hosts:** e.g. DigitalOcean, Render, Railway. Consider a [no-KYC VPS provider](https://kycnot.me/?categories=vps) for maximum security
 
 For setup instructions, see the [n8n docs](https://docs.n8n.io/)
 
@@ -34,12 +34,3 @@ For setup instructions, see the [n8n docs](https://docs.n8n.io/)
 ### 3. Activate & Automate!
 
 Once configured, you can activate workflows to run manually, on a schedule, or via triggers (like webhooks, form entries, RSS updates, etc.).
-
-## 🤝 Contributing
-
-Animal advocates around the world can benefit from collective automation knowledge. You can help by:
-
-- Submitting your own workflows
-- Improving existing ones
-- Translating for non-English speakers
-- Sharing feedback
