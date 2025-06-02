@@ -10,18 +10,13 @@ These workflows are designed to save time, boost impact, and empower advocates t
 
 Choose a deployment method:
 
-- **RepoCloud.io** – _Recommended_  
-  One-click deploy of the open-source community version. A great balance between simplicity and cost.  
+- **RepoCloud.io** – _Recommended for less technical users_  
+  One-click deploy of the open-source community version. A great balance between simplicity and cost for less technical users, but potentially less secure than self-hosting for more technical users with greater security needs.  
   👉 [https://repocloud.io](https://repocloud.io)
 
-- **n8n Cloud**  
-  Official managed hosting by the n8n team — easiest to get started, but more expensive over time.  
-  👉 [https://n8n.io/](https://n8n.io/)
-
-- **Self-hosted (DIY) Options**
-  - **Local Install:** via the official [self-hosted AI starter kit](https://github.com/n8n-io/self-hosted-ai-starter-kit) from n8n
-  - **Docker:** run n8n in a container
-  - **Other VPS/Cloud Hosts:** e.g. DigitalOcean, Render, Railway. Consider a [no-KYC VPS provider](https://kycnot.me/?categories=vps) for maximum security
+- **Self-hosted Options** _Recommended for security conscious users_
+  - **Local Install:** via the official [self-hosted AI starter kit](https://github.com/n8n-io/self-hosted-ai-starter-kit) from n8n. Runs locally on your device, keeping all data secure. Requires extra set-up to allow triggers from third-party applications.
+  - **Cloud Hosting:** via a [no-KYC VPS provider](https://kycnot.me/?categories=vps) paid for with crypto. Consider this option if you need an untraceable cloud-hosted instance with full control over your security settings. Requires some techincal proficiency to set up.
 
 For setup instructions, see the [n8n docs](https://docs.n8n.io/)
 
