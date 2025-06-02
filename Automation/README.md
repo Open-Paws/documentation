@@ -14,7 +14,7 @@ Choose a deployment method:
   One-click deploy of the open-source community version. A great balance between simplicity and cost for less technical users, but potentially less secure than self-hosting for more technical users with greater security needs.  
   👉 [https://repocloud.io](https://repocloud.io)
 
-- **Self-hosted Options** _Recommended for security conscious users_
+- **Self-hosted Options** - _Recommended for security conscious users_
   - **Local Install:** via the official [self-hosted AI starter kit](https://github.com/n8n-io/self-hosted-ai-starter-kit) from n8n. Runs locally on your device, keeping all data secure. Requires extra set-up to allow triggers from third-party applications.
   - **Cloud Hosting:** via a [no-KYC VPS provider](https://kycnot.me/?categories=vps) paid for with crypto. Consider this option if you need an untraceable cloud-hosted instance with full control over your security settings. Requires some techincal proficiency to set up.
 
