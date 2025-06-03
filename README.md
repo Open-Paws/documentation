@@ -1,7 +1,7 @@
 ## Overview
 This repository contains everything you need to build AI implementations to support animal advocacy using Open Paws models, data and tools. 
 
-Our technological ecosystem includes prediction models, a comprehensive vector database, specialized language models, workflow automations for n8n, working code snippets and extensive datasets for model training and fine-tuning.
+Our technological ecosystem includes prediction models, a comprehensive vector database, specialized language models, workflow automations for n8n, working code snippets and extensive datasets for model training.
 
 ## Documentation
 
