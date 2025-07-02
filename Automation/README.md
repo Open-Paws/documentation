@@ -21,9 +21,9 @@ By using our link, you support our nonprofit’s work building open tools for th
 If you're working solo and/or comfortable with basic server setups, self-hosting will be cheaper and more flexible:
 
 * **One-Click Deploy (Best balance of ease & price for less technical users):**
-  🧩 [repocloud.io](https://repocloud.io) – deploy the open-source version in seconds.
+  🧩 [repocloud.io](https://repocloud.io) – deploy the community version in seconds.
 
-* **Local or VPS Hosting:**
+* **Local or VPS Hosting (recommended for security-concious users):**
 
   * **Local Install:** via the official [self-hosted AI starter kit](https://github.com/n8n-io/self-hosted-ai-starter-kit) from n8n.
   * **Cloud VPS:** via a [no-KYC VPS provider](https://kycnot.me/?categories=vps), using crypto for maximum privacy.
