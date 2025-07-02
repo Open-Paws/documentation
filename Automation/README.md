@@ -1,7 +1,3 @@
-Here’s an updated `README.md` for your repo, integrating your request for promoting your affiliate link for n8n Cloud and guiding different users toward the most appropriate hosting option:
-
----
-
 # 🐾 n8n Automation Workflows for Animal Advocates
 
 This repository contains a collection of ready-to-use JSON workflows for [n8n](https://n8n.io/) — the open-source workflow automation tool — tailored specifically for the needs of animal advocacy organizations, campaigns, and grassroots initiatives.
