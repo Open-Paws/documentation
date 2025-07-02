@@ -1,6 +1,6 @@
 # 🐾 n8n Automation Workflows for Animal Advocates
 
-This repository contains a collection of ready-to-use JSON workflows for [n8n](https://n8n.io/) — the open-source workflow automation tool — tailored specifically for the needs of animal advocacy organizations, campaigns, and grassroots initiatives.
+This repository contains a collection of ready-to-use JSON workflows for n8n (a fair-code workflow automation tool) tailored specifically for the needs of animal advocacy organizations, campaigns, and grassroots initiatives.
 
 These workflows are designed to save time, boost impact, and empower advocates through streamlined automation.
 
