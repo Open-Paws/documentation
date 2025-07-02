@@ -13,6 +13,7 @@ These workflows are designed to save time, boost impact, and empower advocates t
 To collaborate, share workflows, and manage users across a team, we **strongly recommend using [n8n Cloud](https://affiliate.n8n.io/your-affiliate-code)** — the official option that enables native collaboration features like credential sharing and multi-user support.
 
 👉 **[Use our affiliate link to sign up for n8n Cloud](https://n8n.partnerlinks.io/rkoz7mvm60qo)**
+
 By using our link, you support our nonprofit’s work building open tools for the animal advocacy movement, at no additional cost to you.
 
 ### 👤 For Individuals & Power Users
