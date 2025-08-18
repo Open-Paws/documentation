@@ -1,6 +1,6 @@
-# Quick Start Guide: Vector-Graph Database with OpenAI Integration
+# Quick Start Guide: Weaviate Vector Database with OpenAI Integration
 
-This guide demonstrates how to use our read-only vector-graph hybrid database powered by [Weaviate](https://weaviate.io/developers/weaviate) with OpenAI integration for AI-enabled knowledge management. You'll need to provide your own OpenAI API key for generating embeddings and using generative AI features.
+This guide demonstrates how to use our read-only vector database powered by [Weaviate](https://weaviate.io/developers/weaviate) with OpenAI integration for AI-enabled knowledge management. You'll need to provide your own OpenAI API key for generating embeddings and using generative AI features.
 
 For complete documentation, visit the [Weaviate Documentation](https://weaviate.io/developers/weaviate).
 
@@ -115,7 +115,39 @@ for group in response.groups:
     print(f"Type: {group.grouped_by.value} Count: {group.total_count}")
 ```
 
-## 4. Best Practices
+## 4. Database Schema
+
+This schema defines the structure of our unified, open-access database designed to support animal advocacy. By integrating data from diverse sources, it supports AI applications such as retrieval-augmented generation (RAG)and model training, as well as general strategic planning and referencing. 
+
+### **Content**
+
+**Purpose**:
+
+The Content class functions as the primary centralized repository for materials related to veganism and animal advocacy, such as articles, reports, blogs, and transcripts. It supports AI applications like semantic search, knowledge graphs, and retrieval-augmented generation (RAG).
+
+**Structure**:
+
+- **summary:** text
+- **main_text:** text
+- **content_type:** text
+- **source_url:** array of texts
+- **date**: date
+- **scores**: object
+    - **good_for_animals:** number
+    - **cultural_sensitivity**: number
+    - **relevance**: number
+    - **insight**: number
+    - **trustworthiness**: number
+    - **emotional_impact**: number
+    - **rationality**: number
+    - **influence**: number
+    - **alignment**: number
+    - **predicted_performance**: number
+    - **average_score**: number
+- **tags**: array of text
+
+
+## 5. Best Practices
 
 1. Use hybrid search for optimal retrieval
 2. Leverage filters to narrow results
