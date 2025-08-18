@@ -6,7 +6,9 @@ A suite of language models specialized for animal advocacy, available in differe
 
 ## Available Models
 
-### Core Chat Model (8B Parameters)
+### Small Language Models (8B Parameters)
+
+Our 8B models were continually pre-trained and finetuned using Llama 3.1 8B as the base model. Given the inherent limitations of small models, we recommend using them only when your project requires running small models locally on consumer hardware. 
 
 - [8B-base-model](https://huggingface.co/open-paws/8B-base-model) - Continually pre-trained model without instruction tuning
 - [8B-instruct-chat](https://huggingface.co/open-paws/8B-instruct-chat) - Fine-tuned chat model with instruction tuning
