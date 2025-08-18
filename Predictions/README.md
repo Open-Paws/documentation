@@ -6,6 +6,8 @@ A suite of prediction models designed to evaluate animal advocacy content throug
 1. **Performance Prediction** – Evaluates content based on real-world advocacy metrics.
 2. **Preference Prediction** – Assesses content using human and synthetic feedback.
 
+👉 **[Browse our full suite of text prediction models on HuggingFace](https://huggingface.co/collections/open-paws/ranking-models-67b94c024535b84d0b73648b)**
+
 ## Using the Models 
 
 These models are text regression models that predict various metrics for animal advocacy content. You can easily use them through the Hugging Face `transformers` library pipeline.
@@ -87,5 +89,3 @@ for text, result in zip(texts, results):
     score = clip_score(result[0]['score'])
     print(f"Text: {text}\nClipped Score: {score}\n")
 ```
-
-## [Available Models on Hugging Face](https://huggingface.co/collections/open-paws/ranking-models-67b94c024535b84d0b73648b)
