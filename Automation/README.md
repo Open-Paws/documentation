@@ -4,7 +4,7 @@ We've built a collection of ready-to-use workflows for n8n (a fair-code workflow
 
 These workflows are designed to save time, boost impact, and empower advocates through streamlined automation.
 
-👉 **[Browser our workflow templates on n8n Creator Hub](https://n8n.partnerlinks.io/open-paws)**
+👉 **[Browse our workflow templates on n8n Creator Hub](https://n8n.partnerlinks.io/open-paws)**
 
 ---
 
