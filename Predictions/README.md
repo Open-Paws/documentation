@@ -3,8 +3,8 @@
 ## Overview
 A suite of prediction models designed to evaluate animal advocacy content through two complementary approaches:
 
-1. **Performance Prediction** – Evaluates content based on real-world advocacy metrics.
-2. **Preference Prediction** – Assesses content using human and synthetic feedback.
+1. **Performance Prediction** – Evaluates content based on real-world advocacy metrics (i.e. social media and email marketing analytics, sentiement analysis of comments and replies etc.).
+2. **Preference Prediction** – Assesses content using human and synthetic feedback (i.e. assessing the cultural sensitivity, emotional impact and persuasiveness of animal rights messages).
 
 👉 **[Browse our full suite of text prediction models on HuggingFace](https://huggingface.co/collections/open-paws/ranking-models-67b94c024535b84d0b73648b)**
 
