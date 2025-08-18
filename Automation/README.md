@@ -23,6 +23,7 @@ By using our link, you support our nonprofit’s work building open tools for th
 If you're working solo and/or comfortable with basic server setups, self-hosting will be cheaper and more flexible:
 
 * **One-Click Deploy (Best balance of ease & price for less technical users):**
+  
   *[RepoCloud](https://repocloud.io) – one-click deployment of the community plan (easier set up, less customisation options)
   *[Elestio](https://elest.io/) - one-click deployment of the community plan (more customisation options, but slightly more difficult to set up)
 
