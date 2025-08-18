@@ -30,7 +30,7 @@ If you're working solo and/or comfortable with basic server setups, self-hosting
 * **Local or No-KYC VPS Hosting (recommended for security-concious users):**
 
   * **Local Install:** via the official [self-hosted AI starter kit](https://github.com/n8n-io/self-hosted-ai-starter-kit) from n8n (best option for users with high security needs).
-  * **No-KYC Cloud VPS:** via a [no-KYC VPS provider](https://kycnot.me/?categories=vps), paying with crypto for maximum privacy (less secure than local hosting, but more secure than regular clous hosting).
+  * **No-KYC Cloud VPS:** via a [no-KYC VPS provider](https://kycnot.me/?categories=vps), paying with crypto for maximum privacy (less secure than local hosting, but more secure than regular cloud hosting).
 
 ---
 
