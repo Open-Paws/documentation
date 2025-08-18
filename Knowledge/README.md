@@ -117,11 +117,7 @@ for group in response.groups:
 
 ## 4. Database Schema
 
-This schema defines the structure of our unified, open-access database designed to support animal advocacy. By integrating data from diverse sources, it supports AI applications such as retrieval-augmented generation (RAG)and model training, as well as general strategic planning and referencing. 
-
-### **Content**
-
-**Purpose**:
+This schema defines the structure of our unified, open-access database designed to support animal advocacy. By integrating data from diverse sources, it supports AI applications such as retrieval-augmented generation (RAG) and model training, as well as general strategic planning and referencing. 
 
 The Content class functions as the primary centralized repository for materials related to veganism and animal advocacy, such as articles, reports, blogs, and transcripts. It supports AI applications like semantic search, knowledge graphs, and retrieval-augmented generation (RAG).
 
@@ -146,8 +142,9 @@ The Content class functions as the primary centralized repository for materials 
     - **average_score**: number
 - **tags**: array of text
 
-
 ## 5. Best Practices
+
+### General Recommendations
 
 1. Use hybrid search for optimal retrieval
 2. Leverage filters to narrow results
@@ -155,5 +152,109 @@ The Content class functions as the primary centralized repository for materials 
 4. Use aggregations for movement insights
 5. Start with small result limits and increase as needed
 6. Test queries with different alpha values in hybrid search to find the optimal balance
+
+### Optimized Retrieval Strategy
+
+7. **Retrieve and Re-rank Pattern**: When quality matters more than speed, retrieve a larger set of results (e.g., 20-30 items) and then apply post-processing to select the best ones:
+
+```python
+# Retrieve more results initially
+response = content.query.near_text(
+    query="effective outreach strategies",
+    limit=20
+)
+
+# Sort by relevant scores and select top performers
+sorted_results = sorted(
+    response.objects,
+    key=lambda x: x.properties['scores']['predicted_performance'],
+    reverse=True
+)
+
+# Pass only top 5 to your application
+top_results = sorted_results[:5]
+```
+
+8. **Multi-Score Ranking**: Combine multiple scores for more nuanced ranking:
+
+```python
+def calculate_composite_score(item):
+    scores = item.properties['scores']
+    # Weight different scores based on your use case
+    return (
+        scores['relevance'] * 0.3 +
+        scores['trustworthiness'] * 0.3 +
+        scores['insight'] * 0.2 +
+        scores['predicted_performance'] * 0.2
+    )
+
+sorted_results = sorted(
+    response.objects,
+    key=calculate_composite_score,
+    reverse=True
+)
+```
+
+### Advanced Filtering for Better RAG Results
+
+9. **Score-Based Filtering**: Use score thresholds to ensure quality before RAG generation:
+
+```python
+from weaviate.classes.query import Filter
+
+# Only retrieve highly trustworthy and relevant content
+response = content.generate.near_text(
+    query="campaign evaluation methods",
+    filters=(
+        Filter.by_property("scores.trustworthiness").greater_than(0.7) &
+        Filter.by_property("scores.relevance").greater_than(0.6)
+    ),
+    grouped_task="Synthesize the most reliable evaluation methods",
+    limit=10
+)
+```
+
+10. **Time-Aware Retrieval**: Combine date filters with scores for recency-weighted results:
+
+```python
+from datetime import datetime, timedelta
+
+# Get high-quality content from the last 6 months
+recent_date = datetime.now() - timedelta(days=180)
+
+response = content.generate.near_text(
+    query="emerging advocacy trends",
+    filters=(
+        Filter.by_property("date").greater_than(recent_date) &
+        Filter.by_property("scores.insight").greater_than(0.5)
+    ),
+    grouped_task="What are the most promising recent trends?",
+    limit=15
+)
+```
+
+11. **Progressive Filtering**: Start broad, then narrow based on initial results:
+
+```python
+# First pass: broad retrieval
+initial_response = content.query.near_text(
+    query="corporate campaigns",
+    limit=30
+)
+
+# Analyze score distribution
+avg_trustworthiness = sum(
+    obj.properties['scores']['trustworthiness'] 
+    for obj in initial_response.objects
+) / len(initial_response.objects)
+
+# Second pass: refined search with dynamic threshold
+refined_response = content.generate.near_text(
+    query="corporate campaigns",
+    filters=Filter.by_property("scores.trustworthiness").greater_than(avg_trustworthiness),
+    grouped_task="What makes these campaigns particularly effective?",
+    limit=10
+)
+```
 
 Note: Always refer to [OpenAI's documentation](https://platform.openai.com/docs) and [Weaviate's documentation](https://weaviate.io/developers/weaviate) for the most up-to-date information.
