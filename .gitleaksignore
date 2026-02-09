@@ -1,0 +1,4 @@
+# Weaviate read-only API key in historical commits (now replaced with placeholder)
+# These findings are from old commits where the key was present before cleanup
+1289b668e1ce8a8554be3504465617218af78722:Knowledge/Data_Structure.md:generic-api-key:12
+664b6a63fffe8df984896cf6abb6dd23cad1c9e6:Knowledge/README.md:generic-api-key:12
