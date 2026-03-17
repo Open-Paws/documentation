@@ -9,7 +9,7 @@ For complete documentation, visit the [Weaviate Documentation](https://weaviate.
 ```
 REST Endpoint: https://larnd9rle1zwapsdcqw.c0.us-east1.gcp.weaviate.cloud
 gRPC Endpoint: https://grpc-larnd9rle1zwapsdcqw.c0.us-east1.gcp.weaviate.cloud
-ReadOnly API Key: <your-weaviate-api-key>
+ReadOnly API Key: Z0lQNXFDVnFnRmV6OTZRdF9KRVUwVzFEdjgxaHIvVFB3dkFyV0JqSnFxWFJYMWhqM0FTQ0NncU14S2hrPV92MjAw
 ```
 
 ## 1. Database Connection
