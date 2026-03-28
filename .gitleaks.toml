@@ -1,0 +1,10 @@
+# Gitleaks configuration for Open-Paws/documentation
+# https://github.com/gitleaks/gitleaks#configuration
+
+[allowlist]
+  description = "Known safe read-only public keys"
+  paths = [
+    # Weaviate read-only API key — intentionally public, used for read access only
+    # See Knowledge/README.md for context
+    '''Knowledge/README\.md''',
+  ]
