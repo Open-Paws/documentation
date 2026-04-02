@@ -20,6 +20,11 @@ Documentation for our specialized generative AI models:
 
 - [Overview & Quick Start](Generation/README.md)
 
+### 🧠 Agent Infrastructure
+Documentation for clean-room agent runtime, orchestration, and tool-safety patterns across Open Paws projects:
+
+- [Overview & Quick Start](Infrastructure/README.md)
+
 ### 🤖 n8n Workflow Automations
 Documentation and example workflows using n8n to automate advocacy tasks.
 

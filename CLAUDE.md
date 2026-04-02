@@ -9,6 +9,7 @@ No build step -- this is a pure documentation repo. Browse by topic:
 - **Vector database (Weaviate):** `Knowledge/README.md`
 - **Prediction models:** `Predictions/README.md`
 - **Language models (8B):** `Generation/README.md`
+- **Agent infrastructure:** `Infrastructure/README.md`
 - **n8n workflow automations:** `Automation/README.md`
 
 ## Architecture
@@ -17,6 +18,7 @@ No build step -- this is a pure documentation repo. Browse by topic:
 Knowledge/       Weaviate vector-graph database docs (connection, search, RAG, schema)
 Predictions/     HuggingFace text regression models (performance + preference prediction)
 Generation/      8B language models (Llama 3.1 base, continual pre-training + instruct)
+Infrastructure/  Clean-room agent runtime, orchestration, and tool-safety patterns
 Automation/      n8n workflow templates for advocacy automation
 .github/         Dependabot config + CI workflows
 ```
@@ -28,6 +30,7 @@ Automation/      n8n workflow templates for advocacy automation
 | `Knowledge/README.md` | Weaviate connection details, search ops, RAG patterns, Content schema |
 | `Predictions/README.md` | Prediction model usage, batch processing, score clipping |
 | `Generation/README.md` | 8B model usage, generation parameters, known limitations |
+| `Infrastructure/README.md` | Clean-room agent runtime roadmap across scanner, platform, and tooling repos |
 | `Automation/README.md` | n8n hosting options, workflow import, activation |
 | `.gitleaksignore` | Secret scanning exclusions (read-only API keys in docs) |
 
