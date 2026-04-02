@@ -9,7 +9,6 @@ No build step -- this is a pure documentation repo. Browse by topic:
 - **Vector database (Weaviate):** `Knowledge/README.md`
 - **Prediction models:** `Predictions/README.md`
 - **Language models (8B):** `Generation/README.md`
-- **Agent infrastructure:** `Infrastructure/README.md`
 - **n8n workflow automations:** `Automation/README.md`
 
 ## Architecture
@@ -18,7 +17,6 @@ No build step -- this is a pure documentation repo. Browse by topic:
 Knowledge/       Weaviate vector-graph database docs (connection, search, RAG, schema)
 Predictions/     HuggingFace text regression models (performance + preference prediction)
 Generation/      8B language models (Llama 3.1 base, continual pre-training + instruct)
-Infrastructure/  Clean-room agent runtime, orchestration, and tool-safety patterns
 Automation/      n8n workflow templates for advocacy automation
 .github/         Dependabot config + CI workflows
 ```
@@ -30,7 +28,6 @@ Automation/      n8n workflow templates for advocacy automation
 | `Knowledge/README.md` | Weaviate connection details, search ops, RAG patterns, Content schema |
 | `Predictions/README.md` | Prediction model usage, batch processing, score clipping |
 | `Generation/README.md` | 8B model usage, generation parameters, known limitations |
-| `Infrastructure/README.md` | Clean-room agent runtime roadmap across scanner, platform, and tooling repos |
 | `Automation/README.md` | n8n hosting options, workflow import, activation |
 | `.gitleaksignore` | Secret scanning exclusions (read-only API keys in docs) |
 
@@ -58,3 +55,61 @@ Automation/      n8n workflow templates for advocacy automation
 - **Adding documentation:** Create a new directory with a `README.md` following the existing pattern
 - **Code examples:** Python with `transformers` or `weaviate` client libraries -- keep examples copy-pasteable
 - **Style:** Each section should be self-contained with connection details, code samples, and best practices
+
+## Organizational Context
+
+**Layer:** 1 | **Lever:** Strengthen | **Integration:** Reference material for platform and ecosystem
+
+This repo documents the AI infrastructure layer that Open Paws tools are built on. It is a reference for Guild developers, bootcamp students, and coalition partners building on the platform.
+
+**Settled decisions affecting this repo:**
+- **2026-04-01: Clean-room agent architecture** — `documentation` owns the shared infrastructure note for the clean-room reuse decision (PR #7 in flight). See `closed-decisions.md` 2026-04-01.
+
+**Relevant strategy documents:**
+- `ecosystem/repos.md` — documentation listed as reference material
+- `programs/developer-training-pipeline/guild/operations.md` — Guild developers use this reference
+
+**Current status:** Active reference. PR #7 (shared infrastructure note for clean-room architecture) is in draft PR review as of 2026-04-01.
+
+## Development Standards
+
+### 10-Point Review Checklist (ranked by AI violation frequency)
+
+1. **DRY** — AI clones code at 4x the human rate. Search before writing anything new
+2. **Deep modules** — Reject shallow wrappers and pass-through methods
+3. **Single responsibility** — Each function does one thing at one level of abstraction
+4. **Error handling** — Never catch-all
+5. **Information hiding** — Don't expose internal state. Mask API keys (last 4 chars only)
+6. **Ubiquitous language** — Use movement terminology consistently
+7. **Design for change** — Abstraction layers and loose coupling
+8. **Legacy velocity** — Use characterization tests before modifying existing code
+9. **Over-patterning** — Simplest structure that works
+10. **Test quality** — Every test must fail when the covered behavior breaks
+
+### Quality Gates
+
+- **Desloppify:** `desloppify scan --path .` — minimum score ≥85
+- **Speciesist language:** `semgrep --config semgrep-no-animal-violence.yaml` on all docs edits
+- **Two-failure rule:** After two failed fixes on the same problem, stop and restart
+
+### Seven Concerns — Critical for This Repo
+
+All 7 concerns apply. Highlighted critical ones:
+
+- **Privacy** (critical) — API keys documented here are read-only Weaviate keys. `.gitleaksignore` covers these. Never commit write-access keys. Check `.gitleaksignore` is current before adding new examples.
+- **Security** — Code examples must use environment variables for any keys. Never hardcode credentials.
+- **Advocacy domain** — All documentation must use movement terminology. Examples should reference **farmed animals** and **factory farms**, not industry euphemisms.
+- **Accessibility** — Documentation must work for developers on low-bandwidth connections. Avoid large embedded images.
+- **Emotional safety** — If documentation examples include advocacy content (animal welfare data, investigation statistics), apply content warnings.
+
+### Advocacy Domain Language
+
+Never introduce synonyms for:
+- **Farmed animal** — not "livestock" in code examples or documentation
+- **Factory farm** — not "farm" or "production facility"
+- **Campaign** — organized advocacy effort
+- **Investigation** — covert documentation (all data is potential evidence)
+
+### Structured Coding Reference
+
+For tool-specific AI coding instructions (Claude Code rules, Cursor MDC, Copilot, Windsurf, etc.), copy the corresponding directory from `structured-coding-with-ai` into this project root.
