@@ -63,13 +63,13 @@ Automation/      n8n workflow templates for advocacy automation
 This repo documents the AI infrastructure layer that Open Paws tools are built on. It is a reference for Guild developers, bootcamp students, and coalition partners building on the platform.
 
 **Settled decisions affecting this repo:**
-- **2026-04-01: Clean-room agent architecture** — `documentation` owns the shared infrastructure note for the clean-room reuse decision (PR #7 in flight). See `closed-decisions.md` 2026-04-01.
+- **2026-04-01: Clean-room agent architecture** — `documentation` owns the shared infrastructure note for the clean-room reuse decision. PR #7 merged (part of the 3/4 clean-room rollout completed 2026-04-09: PCC#13, platform#42, docs#7 merged). Remaining: Tools-Platform#1 repo name needs verification before the rollout is marked complete. See `closed-decisions.md` 2026-04-01.
 
 **Relevant strategy documents:**
 - `ecosystem/repos.md` — documentation listed as reference material
 - `programs/developer-training-pipeline/guild/operations.md` — Guild developers use this reference
 
-**Current status:** Active reference. PR #7 (shared infrastructure note for clean-room architecture) is in draft PR review as of 2026-04-01.
+**Current status (as of 2026-04-09):** Active reference. Clean-room architecture PR #7 merged. The shared infrastructure note is live. Tools-Platform#1 is the outstanding item in the 4-repo rollout.
 
 ## Development Standards
 
