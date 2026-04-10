@@ -1,0 +1,18 @@
+# .coderabbit.yaml
+language: en-US
+reviews:
+  profile: chill          # don't nitpick style; focus on correctness
+  request_changes_workflow: false   # don't block; flag and comment
+  high_level_summary: true
+  poem: false
+  review_status: true
+  auto_review:
+    enabled: true
+    drafts: false
+    base_branches: ["main"]
+
+chat:
+  auto_reply: true
+
+knowledge_base:
+  opt_out: true           # don't train on our codebase
