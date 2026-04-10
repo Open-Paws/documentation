@@ -21,15 +21,45 @@ Automation/      n8n workflow templates for advocacy automation
 .github/         Dependabot config + CI workflows
 ```
 
-## Key Files
+## File Descriptions
+
+### Knowledge (Weaviate Vector Database)
 
 | File | Purpose |
 |------|---------|
-| `Knowledge/README.md` | Weaviate connection details, search ops, RAG patterns, Content schema |
-| `Predictions/README.md` | Prediction model usage, batch processing, score clipping |
-| `Generation/README.md` | 8B model usage, generation parameters, known limitations |
-| `Automation/README.md` | n8n hosting options, workflow import, activation |
-| `.gitleaksignore` | Secret scanning exclusions (read-only API keys in docs) |
+| `Knowledge/README.md` | Weaviate connection details, search operations, RAG patterns, Content schema — primary reference for querying the Open Paws vector-graph database |
+
+### Predictions (HuggingFace Models)
+
+| File | Purpose |
+|------|---------|
+| `Predictions/README.md` | HuggingFace text regression model usage — performance and preference prediction, batch processing patterns, score clipping |
+
+### Generation (Language Models)
+
+| File | Purpose |
+|------|---------|
+| `Generation/README.md` | 8B language model usage — Llama 3.1 base with continual pre-training and instruct tuning, generation parameters, known limitations |
+
+### Automation (n8n Workflows)
+
+| File | Purpose |
+|------|---------|
+| `Automation/README.md` | n8n workflow automation — hosting options (cloud/self-hosted), workflow import/export, activation, advocacy-specific workflow templates |
+
+### Infrastructure
+
+| File | Purpose |
+|------|---------|
+| `Infrastructure/README.md` | Clean-room agent architecture reference — shared runtime patterns, tool registry, operator controls, and safety boundaries across Open Paws repos. Canonical source for the 2026-04-01 clean-room reuse decision |
+
+### Root
+
+| File | Purpose |
+|------|---------|
+| `README.md` | Human-facing overview — quick start, architecture summary, HuggingFace dataset links |
+| `CONTRIBUTING.md` | Contribution guidelines for documentation PRs |
+| `.gitleaksignore` | Secret scanning exclusions — covers read-only Weaviate API keys that appear in code examples |
 
 ## External Dependencies
 
@@ -64,10 +94,6 @@ This repo documents the AI infrastructure layer that Open Paws tools are built o
 
 **Settled decisions affecting this repo:**
 - **2026-04-01: Clean-room agent architecture** — `documentation` owns the shared infrastructure note for the clean-room reuse decision. PR #7 merged (part of the 3/4 clean-room rollout completed 2026-04-09: PCC#13, platform#42, docs#7 merged). Remaining: Tools-Platform#1 repo name needs verification before the rollout is marked complete. See `closed-decisions.md` 2026-04-01.
-
-**Relevant strategy documents:**
-- `ecosystem/repos.md` — documentation listed as reference material
-- `programs/developer-training-pipeline/guild/operations.md` — Guild developers use this reference
 
 **Current status (as of 2026-04-09):** Active reference. Clean-room architecture PR #7 merged. The shared infrastructure note is live. Tools-Platform#1 is the outstanding item in the 4-repo rollout.
 
@@ -104,12 +130,12 @@ All 7 concerns apply. Highlighted critical ones:
 
 ### Advocacy Domain Language
 
-Never introduce synonyms for:
-- **Farmed animal** — not "livestock" in code examples or documentation
-- **Factory farm** — not "farm" or "production facility"
-- **Campaign** — organized advocacy effort
-- **Investigation** — covert documentation (all data is potential evidence)
+See `CONTRIBUTING.md` for the full list of required movement terminology and speciesist idioms to avoid.
 
 ### Structured Coding Reference
 
-For tool-specific AI coding instructions (Claude Code rules, Cursor MDC, Copilot, Windsurf, etc.), copy the corresponding directory from `structured-coding-with-ai` into this project root.
+For tool-specific AI coding instructions (Claude Code rules, Cursor MDC, Copilot, Windsurf, etc.), copy the corresponding directory from [structured-coding-with-ai](https://github.com/Open-Paws/structured-coding-with-ai) into this project root.
+
+## Decisions Reviewed
+
+Last reviewed: 2026-04-11
