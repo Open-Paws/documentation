@@ -13,7 +13,7 @@ What does not belong here: application code, deployment configuration, runnable 
 
 ## Directory structure
 
-```
+```text
 Knowledge/       Weaviate vector-graph database (connection, search, RAG, schema)
 Predictions/     HuggingFace text regression models (performance + preference prediction)
 Generation/      8B language models (Llama 3.1 base, continual pre-training + instruct)
@@ -64,7 +64,7 @@ Read-only Weaviate keys used in examples are covered by `.gitleaksignore`. Do no
 
 - **One topic per PR.** Documentation PRs should be easy to review. If you are adding a new section and fixing an existing one, open two PRs.
 - **Keep PRs under 200 lines** where possible. Longer PRs are harder to review and more likely to introduce terminology drift.
-- **Run the language check** before opening a PR: `semgrep --config semgrep-no-animal-violence.yaml` on any `.md` files you changed. The CI action will catch violations, but it is faster to fix them locally.
+- **Run the language check** before opening a PR: run semgrep using the rules from [github.com/Open-Paws/semgrep-rules-no-animal-violence](https://github.com/Open-Paws/semgrep-rules-no-animal-violence) on any `.md` files you changed. The CI action will catch violations, but it is faster to fix them locally.
 - **Link the upstream source** if your documentation describes a feature defined in another repo. Docs that duplicate source-of-truth content in another repo will drift — link instead.
 
 ## Quality gate

@@ -95,10 +95,6 @@ This repo documents the AI infrastructure layer that Open Paws tools are built o
 **Settled decisions affecting this repo:**
 - **2026-04-01: Clean-room agent architecture** — `documentation` owns the shared infrastructure note for the clean-room reuse decision. PR #7 merged (part of the 3/4 clean-room rollout completed 2026-04-09: PCC#13, platform#42, docs#7 merged). Remaining: Tools-Platform#1 repo name needs verification before the rollout is marked complete. See `closed-decisions.md` 2026-04-01.
 
-**Relevant strategy documents:**
-- `ecosystem/repos.md` — documentation listed as reference material
-- `programs/developer-training-pipeline/guild/operations.md` — Guild developers use this reference
-
 **Current status (as of 2026-04-09):** Active reference. Clean-room architecture PR #7 merged. The shared infrastructure note is live. Tools-Platform#1 is the outstanding item in the 4-repo rollout.
 
 ## Development Standards
@@ -134,15 +130,11 @@ All 7 concerns apply. Highlighted critical ones:
 
 ### Advocacy Domain Language
 
-Never introduce synonyms for:
-- **Farmed animal** — not "livestock" in code examples or documentation
-- **Factory farm** — not "farm" or "production facility"
-- **Campaign** — organized advocacy effort
-- **Investigation** — covert documentation (all data is potential evidence)
+See `CONTRIBUTING.md` for the full list of required movement terminology and speciesist idioms to avoid.
 
 ### Structured Coding Reference
 
-For tool-specific AI coding instructions (Claude Code rules, Cursor MDC, Copilot, Windsurf, etc.), copy the corresponding directory from `structured-coding-with-ai` into this project root.
+For tool-specific AI coding instructions (Claude Code rules, Cursor MDC, Copilot, Windsurf, etc.), copy the corresponding directory from [structured-coding-with-ai](https://github.com/Open-Paws/structured-coding-with-ai) into this project root.
 
 ## Decisions Reviewed
 
