@@ -1,0 +1,16 @@
+name: Setup Labels
+
+on:
+  workflow_dispatch:
+
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create auto-merge label
+        run: |
+          gh label create "auto-merge" --color "0075ca" --description "Agent-approved Level 0 PR — merge automatically after CI passes" --repo "$GITHUB_REPOSITORY" 2>/dev/null || true
+          gh label create "needs-human-review" --color "e4e669" --description "Level 1 PR — async human review within 24h" --repo "$GITHUB_REPOSITORY" 2>/dev/null || true
+          gh label create "human-gate" --color "d93f0b" --description "Level 2 PR — must have explicit human approval before merge" --repo "$GITHUB_REPOSITORY" 2>/dev/null || true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
