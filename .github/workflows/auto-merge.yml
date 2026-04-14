@@ -122,7 +122,7 @@ jobs:
           echo "Check runs: $CHECKS"
 
           # Fail if any required check is not success/skipped
-          FAILED=$(echo "$CHECKS" | jq -r '.[] | select(.conclusion != "success" and .conclusion != "skipped" and .status == "completed") | .name')
+          FAILED=$(echo "$CHECKS" | jq -r '.[] | select(.conclusion != "success" and .conclusion != "skipped" and .status == "completed") | select(.name | ascii_downcase | contains("auto-merge") | not) | .name')
           if [ -n "$FAILED" ]; then
             echo "ci_pass=false" >> "$GITHUB_OUTPUT"
             echo "FAILED checks: $FAILED"
