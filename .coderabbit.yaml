@@ -1,8 +1,10 @@
-# .coderabbit.yaml
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
 language: en-US
+tone_instructions: "Direct and concise. Focus on correctness and clarity."
+
 reviews:
-  profile: chill          # don't nitpick style; focus on correctness
-  request_changes_workflow: false   # don't block; flag and comment
+  profile: assertive
+  request_changes_workflow: false
   high_level_summary: true
   poem: false
   review_status: true
@@ -10,9 +12,63 @@ reviews:
     enabled: true
     drafts: false
     base_branches: ["main"]
+    ignore_usernames: ["dependabot[bot]", "renovate[bot]"]
+
+  path_filters:
+    - "!**/*.lock"
+
+  path_instructions:
+    - path: "**/*.md"
+      instructions: |
+        Check for: speciesist language, factual accuracy about animal advocacy, correct movement terminology.
+        Verify: campaign/investigation/coalition/farmed animal/factory farm/slaughterhouse used precisely.
+        No industry euphemisms ('livestock', 'production facility', 'farm').
+
+  pre_merge_checks:
+    custom_checks:
+      - name: "No speciesist idioms"
+        mode: "error"
+        instructions: |
+          Fail if docs contain speciesist idioms:
+          'livestock' -> 'farmed animals', 'master/slave' -> 'primary/replica',
+          'whitelist/blacklist' -> 'allowlist/denylist', 'kill two birds' -> 'accomplish two things at once',
+          'guinea pig' -> 'test subject', 'farm' (industry euphemism) -> 'factory farm'.
+      - name: "No hardcoded secrets or credentials"
+        mode: "error"
+        instructions: "Fail if any file contains hardcoded API keys, tokens, or credentials."
+
+  finishing_touches:
+    unit_tests:
+      enabled: false
+    custom:
+      - name: "fix NAV violations"
+        instructions: "Replace speciesist idioms in changed files per https://github.com/Open-Paws/no-animal-violence"
+
+  tools:
+    semgrep:
+      enabled: true
+      config_file: "semgrep-no-animal-violence.yaml"
+    trufflehog:
+      enabled: true
+    github-checks:
+      enabled: true
+      timeout_ms: 90000
 
 chat:
   auto_reply: true
+  art: false
 
 knowledge_base:
-  opt_out: true           # don't train on our codebase
+  opt_out: true
+  web_search:
+    enabled: false
+  learnings:
+    scope: "local"
+  pull_requests:
+    scope: "local"
+  jira:
+    usage: "disabled"
+  linear:
+    usage: "disabled"
+  mcp:
+    usage: "disabled"
