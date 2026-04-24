@@ -25,7 +25,7 @@ jobs:
 
       - name: Cache desloppify install
         id: cache-desloppify
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: /tmp/desloppify
           key: desloppify-${{ runner.os }}-${{ hashFiles('.github/workflows/desloppify.yml') }}
