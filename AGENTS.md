@@ -72,9 +72,7 @@ The `Infrastructure/` directory is the exception — it is an architectural refe
 | Repo | Relationship |
 |------|-------------|
 | [`platform`](https://github.com/Open-Paws/platform) | Platform ingests Weaviate knowledge base and prediction model scores; this repo documents those APIs |
-| [`gary`](https://github.com/Open-Paws/gary) | Autonomous agent uses generation models and Weaviate RAG; this repo documents the interfaces gary depends on |
 | [`project-compassionate-code`](https://github.com/Open-Paws/project-compassionate-code) | `Infrastructure/README.md` documents the clean-room scanner export contract PCC must implement |
-| [`graze-cli`](https://github.com/Open-Paws/graze-cli) | CLI uses generation models; `Generation/README.md` is the reference |
 | [`no-animal-violence`](https://github.com/Open-Paws/no-animal-violence) | Language rules enforced by CI on every PR to this repo |
 | [`context`](https://github.com/Open-Paws/context) | Strategy repo; check before starting any session to pick up current priorities |
 
