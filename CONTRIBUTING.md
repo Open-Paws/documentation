@@ -39,7 +39,7 @@ Write in plain, direct prose. First-person plural ("we") is appropriate when des
 
 **Use movement terminology.** This documentation exists to help developers build tools for animal liberation. Use precise advocacy language:
 
-- **Farmed animal** — not "livestock" (industry framing)
+- **Farmed animal** — not the industry term (use movement language, not production framing)
 - **Factory farm** — not "farm" or "production facility"
 - **Campaign** — an organized advocacy effort with defined goals
 - **Investigation** — covert documentation (all data is potential evidence)
@@ -47,7 +47,7 @@ Write in plain, direct prose. First-person plural ("we") is appropriate when des
 
 The full language guide and automated enforcement tools are at [github.com/Open-Paws/no-animal-violence](https://github.com/Open-Paws/no-animal-violence). The pre-commit hook runs on every commit — if it flags something, fix it rather than bypassing it.
 
-**No speciesist idioms.** Avoid idioms that normalize animal violence. Common ones to watch for: "kill two birds with one stone" (use "accomplish two things at once"), "guinea pig" as a test-subject metaphor (use "test subject"), "cattle vs. pets" distinctions (use "ephemeral vs. persistent").
+**No speciesist idioms.** Avoid idioms that normalize animal violence. The full rule set is at [Open-Paws/no-animal-violence](https://github.com/Open-Paws/no-animal-violence). Use inclusive alternatives: "accomplish two things at once", "test subject", "ephemeral vs. persistent".
 
 ## Referencing Open Paws tools and APIs
 

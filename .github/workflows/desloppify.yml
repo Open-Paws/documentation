@@ -48,6 +48,16 @@ jobs:
             exit 1
           fi
           echo "Objective score: ${SCORE}/100"
+          # When there are no recognized code files (documentation-only repos),
+          # desloppify returns 0.0 because there is nothing to measure, not
+          # because the code is bad. Detect this via empty Zones output and
+          # treat it as a full pass rather than a false failure.
+          ZONES=$(echo "${SCAN_OUTPUT}" | grep -oP '(?<=Zones: ).*' | head -1)
+          if [ -z "${ZONES}" ] && python3 -c "import sys; sys.exit(0 if float('${SCORE}') == 0.0 else 1)"; then
+            echo "No code files detected in any zone - documentation-only repository."
+            echo "Gate passes: 0.0 score reflects an empty scan, not poor quality."
+            SCORE="100.0"
+          fi
           python3 -c "
           score = float('${SCORE}')
           threshold = 70
