@@ -22,17 +22,17 @@ reviews:
       instructions: |
         Check for: speciesist language, factual accuracy about animal advocacy, correct movement terminology.
         Verify: campaign/investigation/coalition/farmed animal/factory farm/slaughterhouse used precisely.
-        No industry euphemisms ('livestock', 'production facility', 'farm').
+        No industry euphemisms (use 'farmed animals' not industry terms; use 'factory farm' not 'farm').
 
   pre_merge_checks:
     custom_checks:
       - name: "No speciesist idioms"
         mode: "error"
         instructions: |
-          Fail if docs contain speciesist idioms:
-          'livestock' -> 'farmed animals', 'master/slave' -> 'primary/replica',
-          'whitelist/blacklist' -> 'allowlist/denylist', 'kill two birds' -> 'accomplish two things at once',
-          'guinea pig' -> 'test subject', 'farm' (industry euphemism) -> 'factory farm'.
+          Fail if docs contain speciesist idioms as defined in
+          https://github.com/Open-Paws/no-animal-violence — use inclusive alternatives
+          (e.g., 'farmed animals', 'primary/replica', 'allowlist/denylist',
+          'accomplish two things at once', 'test subject', 'factory farm').
       - name: "No hardcoded secrets or credentials"
         mode: "error"
         instructions: "Fail if any file contains hardcoded API keys, tokens, or credentials."
