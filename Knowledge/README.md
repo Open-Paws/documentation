@@ -11,6 +11,13 @@ REST Endpoint: https://larnd9rle1zwapsdcqw.c0.us-east1.gcp.weaviate.cloud
 gRPC Endpoint: https://grpc-larnd9rle1zwapsdcqw.c0.us-east1.gcp.weaviate.cloud
 ReadOnly API Key: Z0lQNXFDVnFnRmV6OTZRdF9KRVUwVzFEdjgxaHIvVFB3dkFyV0JqSnFxWFJYMWhqM0FTQ0NncU14S2hrPV92MjAw
 ```
+## Required Environment Variables
+
+| Variable | Required | Description |
+|-----------|-----------|------------|
+| WEAVIATE_URL | Yes | Weaviate cluster URL |
+| WEAVIATE_API_KEY | Yes | Read-only API key for database access |
+| OPENAI_APIKEY | Yes | OpenAI API key used for embeddings and generation |
 
 ## 1. Database Connection
 
@@ -256,5 +263,40 @@ refined_response = content.generate.near_text(
     limit=10
 )
 ```
+## Troubleshooting
+
+### Authentication Errors
+
+If connection attempts fail:
+
+- Verify that `WEAVIATE_URL` is configured correctly.
+- Verify that `WEAVIATE_API_KEY` is present in your environment.
+- Verify that `OPENAI_APIKEY` is configured when using OpenAI-powered features.
+
+### Empty Search Results
+
+If searches return no useful results:
+
+- Try broader search queries.
+- Increase the result limit.
+- Test hybrid search instead of vector-only search.
+- Verify that the target collection contains indexed data.
+### OpenAI Integration Errors
+
+Common causes include:
+
+- Invalid API credentials.
+- OpenAI rate limits.
+- Network connectivity issues.
+
+Refer to OpenAI API logs for additional debugging information.
+
+### Slow Retrieval Performance
+
+If retrieval is slower than expected:
+
+- Reduce result limits.
+- Apply filters before generation.
+- Use retrieval and re-ranking patterns only when higher quality results are required.
 
 Note: Always refer to [OpenAI's documentation](https://platform.openai.com/docs) and [Weaviate's documentation](https://weaviate.io/developers/weaviate) for the most up-to-date information.
