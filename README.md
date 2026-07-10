@@ -8,9 +8,9 @@ This repository provides the technical documentation, implementation guides, and
 
 ## What is Open Paws?
 
-Open Paws is an open AI ecosystem that provides reusable infrastructure, models, and developer tools for building intelligent applications.
+Open Paws is an open AI ecosystem that provides reusable infrastructure, models, and developer tools for building animal advocacy applications.
 
-This repository explains how every component works, how they connect together, and how to integrate them into your own projects.
+This repository explains how every component works, how they connect together, and how to integrate them into your own projects and tooling.
 
 ---
 
