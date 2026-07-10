@@ -1,18 +1,89 @@
 # Open Paws Documentation
 
-Official developer documentation for the Open Paws ecosystem.
+Official documentation for the Open Paws AI ecosystem.
 
-This repository contains guides, references, and best practices for building applications with Open Paws AI infrastructure.
+This repository provides the technical documentation, implementation guides, and architecture references for developers building with Open Paws. Whether you're integrating AI models, working with vector search, creating automation workflows, or contributing to the platform, this documentation is the primary starting point.
 
 ---
 
-## Contents
+## What is Open Paws?
 
-- Knowledge
-- Predictions
-- Generation
-- Automation
-- Infrastructure
+Open Paws is an open AI ecosystem that provides reusable infrastructure, models, and developer tools for building intelligent applications.
+
+This repository explains how every component works, how they connect together, and how to integrate them into your own projects.
+
+---
+
+## What You'll Find
+
+### Knowledge
+
+Documentation for the vector database and Retrieval-Augmented Generation (RAG).
+
+Topics include:
+
+- Weaviate
+- Semantic Search
+- Hybrid Search
+- Vector Search
+- RAG
+- Query Examples
+
+---
+
+### Predictions
+
+Guides for using Hugging Face prediction models.
+
+Includes:
+
+- Model Loading
+- Inference
+- Batch Processing
+- Performance Prediction
+- Preference Prediction
+
+---
+
+### Generation
+
+Documentation for Open Paws language models.
+
+Learn about:
+
+- Model Usage
+- Prompting
+- Generation Parameters
+- Local Deployment
+- Best Practices
+
+---
+
+### Automation
+
+Ready-to-use automation workflows built with n8n.
+
+Includes:
+
+- Workflow Templates
+- AI Automation
+- Integrations
+- Deployment Guides
+
+---
+
+### Infrastructure
+
+Documentation for the platform architecture.
+
+Includes:
+
+- Agent Runtime
+- System Design
+- Tool Registry
+- Deployment
+- Security
+- Best Practices
 
 ---
 
@@ -25,22 +96,11 @@ documentation/
 ├── Infrastructure/
 ├── Knowledge/
 ├── Predictions/
+├── .github/
 ├── CONTRIBUTING.md
 ├── LICENSE
 └── README.md
 ```
-
----
-
-## Documentation
-
-| Folder | Description |
-|--------|-------------|
-| Knowledge | Vector database, semantic search, and RAG |
-| Predictions | Hugging Face prediction models |
-| Generation | Language model documentation |
-| Automation | n8n workflows and automation |
-| Infrastructure | Agent architecture and deployment |
 
 ---
 
@@ -50,18 +110,48 @@ Clone the repository.
 
 ```bash
 git clone https://github.com/Open-Paws/documentation.git
+
 cd documentation
 ```
 
-Browse the documentation folder that matches your use case.
+Open the folder that matches your use case and follow the guides.
+
+---
+
+## Documentation Overview
+
+| Directory | Purpose |
+|-----------|---------|
+| Knowledge | Vector databases, search, and RAG |
+| Predictions | Hugging Face prediction models |
+| Generation | Language models and prompting |
+| Automation | n8n workflows and automation |
+| Infrastructure | Architecture and deployment |
+
+---
+
+## Who Is This For?
+
+This documentation is intended for:
+
+- AI Engineers
+- Software Developers
+- ML Engineers
+- Open Source Contributors
+- Researchers
+- Platform Integrators
+
+Whether you're exploring Open Paws or contributing to the ecosystem, this repository contains everything you need to understand the platform.
 
 ---
 
 ## Contributing
 
-Contributions are welcome.
+We welcome contributions from the community.
 
-Please read the contribution guidelines before submitting a pull request.
+Before opening a Pull Request, please read the contribution guidelines.
+
+See:
 
 ```
 CONTRIBUTING.md
@@ -73,4 +163,4 @@ CONTRIBUTING.md
 
 This project is licensed under the MIT License.
 
-See the `LICENSE` file for more information.
+See the `LICENSE` file for details.
