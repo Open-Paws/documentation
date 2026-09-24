@@ -1,1 +1,160 @@
-IyBPcGVuIFBhd3MgRG9jdW1lbnRhdGlvbgoKWyFbTGljZW5zZTogTUlUXShodHRwczovL2ltZy5zaGllbGRzLmlvL2JhZGdlL0xpY2Vuc2UtTUlULWdyZWVuLnN2ZyldKExJQ0VOU0UpClshW0xhc3QgQ29tbWl0XShodHRwczovL2ltZy5zaGllbGRzLmlvL2dpdGh1Yi9sYXN0LWNvbW1pdC9PcGVuLVBhd3MvZG9jdW1lbnRhdGlvbildKGh0dHBzOi8vZ2l0aHViLmNvbS9PcGVuLVBhd3MvZG9jdW1lbnRhdGlvbi9jb21taXRzL21haW4pClshW0h1Z2dpbmdGYWNlXShodHRwczovL2ltZy5zaGllbGRzLmlvL2JhZGdlL0h1Z2dpbmdGYWNlLW9wZW4tLXBhd3MteWVsbG93KV0oaHR0cHM6Ly9odWdnaW5nZmFjZS5jby9vcGVuLXBhd3MpCgotLS0KClRoaXMgcmVwbyBpcyB0aGUgZGV2ZWxvcGVyIGRvY3VtZW50YXRpb24gaHViIGZvciBPcGVuIFBhd3MgQUkgaW5mcmFzdHJ1Y3R1cmUg4oCUIGEgcHVycG9zZS1idWlsdCBzdGFjayBmb3IgYW5pbWFsIGFkdm9jYWN5IG9yZ2FuaXphdGlvbnMsIHJlc2VhcmNoZXJzLCBhbmQgZW5naW5lZXJzLiBJdCBjb3ZlcnMgdGhlIGZ1bGwgQUkgc3RhY2s6IGEgV2VhdmlhdGUgdmVjdG9yIGtub3dsZWRnZSBiYXNlLCBIdWdnaW5nRmFjZSB0ZXh0IHJlZ3Jlc3Npb24gcHJlZGljdGlvbiBtb2RlbHMsIDhCIGxhbmd1YWdlIG1vZGVscywgbjhuIHdvcmtmbG93IGF1dG9tYXRpb25zLCBhbmQgYSBjbGVhbi1yb29tIGFnZW50IGFyY2hpdGVjdHVyZSByZWZlcmVuY2UuIElmIHlvdSBhcmUgYnVpbGRpbmcgYWR2b2NhY3kgdG9vbHMsIGNhbXBhaWduIGF1dG9tYXRpb25zLCBvciBmaW5lLXR1bmVkIG1vZGVscyB1c2luZyBPcGVuIFBhd3MgcmVzb3VyY2VzLCBzdGFydCBoZXJlLgoKPiBbIU5PVEVdCj4gVGhpcyBwcm9qZWN0IGlzIHBhcnQgb2YgdGhlIFtPcGVuIFBhd3NdKGh0dHBzOi8vb3BlbnBhd3MuYWkpIGVjb3N5c3RlbSDigJQgQUkgaW5mcmFzdHJ1Y3R1cmUgZm9yIHRoZSBhbmltYWwgbGliZXJhdGlvbiBtb3ZlbWVudC4gW0V4cGxvcmUgdGhlIGZ1bGwgcGxhdGZvcm0g4oaSXShodHRwczovL2dpdGh1Yi5jb20vT3Blbi1QYXdzKQoKQW5pbWFsIGFkdm9jYWN5IG9yZ2FuaXphdGlvbnMgYXJlIHVuZGVyLXJlc291cmNlZCByZWxhdGl2ZSB0byB0aGUgaW5kdXN0cmllcyB0aGV5IGNoYWxsZW5nZS4gVGhpcyBkb2N1bWVudGF0aW9uIGV4aXN0cyB0byBsb3dlciB0aGUgYmFycmllciBmb3IgZGV2ZWxvcGVycyBhbmQgdGVjaG5pY2FsbHkgY2FwYWJsZSBhZHZvY2F0ZXMgdG8gYnVpbGQgQUkgdG9vbHMgdGhhdCBhY3R1YWxseSBtb3ZlIHRoZSBuZWVkbGUg4oCUIG5vdCBhZGFwdGVkIGZyb20gZ2VuZXJpYyB1c2UgY2FzZXMsIGJ1dCBkZXNpZ25lZCBmcm9tIHRoZSBncm91bmQgdXAgZm9yIGludmVzdGlnYXRpdmUgcmVzZWFyY2gsIGNhbXBhaWduIGV2YWx1YXRpb24sIGFuZCBtb3ZlbWVudCBjb29yZGluYXRpb24uCgotLS0KCiMjIEFyY2hpdGVjdHVyZQoKYGBgbWVybWFpZApncmFwaCBURAogICAgQVtZb3VyIEFwcGxpY2F0aW9uXSAtLT4gQltLbm93bGVkZ2VcbldlYXZpYXRlIFZlY3RvciBEQl0KICAgIEEgLS0+IENbUHJlZGljdGlvbnNcbkh1Z2dpbmdGYWNlIFJlZ3Jlc3Npb24gTW9kZWxzXQogICAgQSAtLT4gRFtHZW5lcmF0aW9uXG44QiBMYW5ndWFnZSBNb2RlbHNdCiAgICBBIC0tPiBFW0F1dG9tYXRpb25cbm44biBXb3JrZmxvdyBUZW1wbGF0ZXNdCiAgICBBIC0tPiBGW0luZnJhc3RydWN0dXJlXG5DbGVhbi1Sb29tIEFnZW50IFJ1bnRpbWVdCgogICAgQiAtLT4gR1soQWR2b2NhY3kgQ29udGVudFxuQXJ0aWNsZXMgwrcgUmVwb3J0cyDCtyBDYW1wYWlnbnMpXQogICAgQyAtLT4gSFsoSHVnZ2luZ0ZhY2Vcbm9wZW4tcGF3cyBjb2xsZWN0aW9uKV0KICAgIEQgLS0+IEgKICAgIEUgLS0+IElbKG44biBDcmVhdG9yIEh1YlxuV29ya2Zsb3cgVGVtcGxhdGVzKV0KYGBgCgpFYWNoIHNlY3Rpb24gaXMgc2VsZi1jb250YWluZWQ6IGNvbm5lY3Rpb24gZGV0YWlscywgd29ya2luZyBjb2RlIHNhbXBsZXMsIGFuZCBrbm93biBsaW1pdGF0aW9ucyBsaXZlIHRvZ2V0aGVyIGluIG9uZSBwbGFjZS4KCi0tLQoKIyMgUXVpY2tzdGFydAoKVGhpcyByZXBvIGNvbnRhaW5zIG5vIGFwcGxpY2F0aW9uIGNvZGUg4oCUIHRoZXJlIGlzIG5vdGhpbmcgdG8gYnVpbGQgb3IgZGVwbG95LiBCcm93c2UgdGhlIHNlY3Rpb24gdGhhdCBtYXRjaGVzIHlvdXIgdXNlIGNhc2U6CgpgYGBiYXNoCiMgQ2xvbmUgdG8gYnJvd3NlIGxvY2FsbHkKZ2l0IGNsb25lIGh0dHBzOi8vZ2l0aHViLmNvbS9PcGVuLVBhd3MvZG9jdW1lbnRhdGlvbi5naXQKY2QgZG9jdW1lbnRhdGlvbgoKIyBDb25uZWN0IHRvIHRoZSBXZWF2aWF0ZSBrbm93bGVkZ2UgYmFzZSAocmVxdWlyZXMgeW91ciBvd24gT3BlbkFJIEFQSSBrZXkpCiMgU2VlIEtub3dsZWRnZS9SRUFETUUubWQgZm9yIGZ1bGwgY29ubmVjdGlvbiBkZXRhaWxzCmV4cG9ydCBXRUFWSUFURV9VUkw9Imh0dHBzOi8vbGFybmQ5cmxlMXp3YXBzZGNxdy5jMC51cy1lYXN0MS5nY3Aud2VhdmlhdGUuY2xvdWQiCmV4cG9ydCBXRUFWSUFURV9BUElfS0VZPSI8cmVhZC1vbmx5IGtleSBpbiBLbm93bGVkZ2UvUkVBRE1FLm1kPiIKZXhwb3J0IE9QRU5BSV9BUElLRVk9Ijx5b3VyIGtleT4iCgojIFJ1biBhIHByZWRpY3Rpb24gbW9kZWwgKHJlcXVpcmVzIHRyYW5zZm9ybWVycykKcGlwIGluc3RhbGwgdHJhbnNmb3JtZXJzIHRvcmNoCnB5dGhvbiAtYyAiCmZyb20gdHJhbnNmb3JtZXJzIGltcG9ydCBwaXBlbGluZQpwID0gcGlwZWxpbmUoJ3RleHQtY2xhc3NpZmljYXRpb24nLCBtb2RlbD0nb3Blbi1wYXdzL3BlcmNlaXZlZF90cnVzdHdvcnRoaW5lc3NfcHJlZGljdGlvbicsIHJldHVybl9hbGxfc2NvcmVzPVRydWUpCnByaW50KHAoJ0FuaW1hbHMgZGVzZXJ2ZSB0byBsaXZlIGZyZWUgZnJvbSBleHBsb2l0YXRpb24uJykpCiIKYGBgCgpTZWUgW0tub3dsZWRnZS9SRUFETUUubWRdKEtub3dsZWRnZS9SRUFETUUubWQpLCBbUHJlZGljdGlvbnMvUkVBRE1FLm1kXShQcmVkaWN0aW9ucy9SRUFETUUubWQpLCBhbmQgW0dlbmVyYXRpb24vUkVBRE1FLm1kXShHZW5lcmF0aW9uL1JFQURNRS5tZCkgZm9yIGNvbXBsZXRlIHdvcmtpbmcgZXhhbXBsZXMuCgotLS0KCiMjIEZlYXR1cmVzCgotICoqV2VhdmlhdGUgdmVjdG9yIGtub3dsZWRnZSBiYXNlKiog4oCUIHJlYWQtb25seSBwdWJsaWMgYWNjZXNzIHRvIGEgdmVjdG9yLWdyYXBoIGRhdGFiYXNlIG9mIGFkdm9jYWN5IGNvbnRlbnQgKGFydGljbGVzLCByZXBvcnRzLCBjYW1wYWlnbiBtYXRlcmlhbHMsIGludmVzdGlnYXRpb24gZmluZGluZ3MpIHdpdGggcGVyLWRvY3VtZW50IHNjb3JpbmcgYWNyb3NzIHRydXN0d29ydGhpbmVzcywgaW5zaWdodCwgcmVsZXZhbmNlLCBwcmVkaWN0ZWQgcGVyZm9ybWFuY2UsIGFuZCBtb3JlCi0gKipWZWN0b3IsIGh5YnJpZCwgYW5kIGZpbHRlcmVkIHNlYXJjaCoqIOKAlCBxdWVyeSB0aGUga25vd2xlZGdlIGJhc2Ugd2l0aCBzZW1hbnRpYyBzaW1pbGFyaXR5LCBrZXl3b3JkIHdlaWdodGluZywgYW5kIHNjb3JlLWJhc2VkIGZpbHRlcnM7IGZ1bGwgUkFHIHN1cHBvcnQgdmlhIFdlYXZpYXRlJ3MgZ3JvdXBlZC10YXNrIGdlbmVyYXRpb24KLSAqKlRleHQgcmVncmVzc2lvbiBwcmVkaWN0aW9uIG1vZGVscyoqIOKAlCBIdWdnaW5nRmFjZSBwaXBlbGluZS1jb21wYXRpYmxlIG1vZGVscyBzY29yaW5nIGFkdm9jYWN5IG1lc3NhZ2VzIG9uIHBlcmZvcm1hbmNlIG1ldHJpY3MgKHNvY2lhbCBtZWRpYSBhbmFseXRpY3MsIHNlbnRpbWVudCkgYW5kIGh1bWFuLXByZWZlcmVuY2UgZGltZW5zaW9ucyAoY3VsdHVyYWwgc2Vuc2l0aXZpdHksIGVtb3Rpb25hbCBpbXBhY3QsIHBlcnN1YXNpdmVuZXNzKQotICoqOEIgYWR2b2NhY3kgbGFuZ3VhZ2UgbW9kZWxzKiog4oCUIExsYW1hIDMuMeKAk2Jhc2VkIG1vZGVscyBjb250aW51YWxseSBwcmUtdHJhaW5lZCBhbmQgaW5zdHJ1Y3Rpb24tdHVuZWQgb24gYW5pbWFsIGFkdm9jYWN5IGNvbnRlbnQ7IG9wdGltaXplZCBmb3IgbG9jYWwgYW5kIGxvdy1tZW1vcnkgZGVwbG95bWVudAotICoqbjhuIHdvcmtmbG93IHRlbXBsYXRlcyoqIOKAlCByZWFkeS10by1pbXBvcnQgYXV0b21hdGlvbiB0ZW1wbGF0ZXMgZm9yIGNvbW1vbiBhZHZvY2FjeSB3b3JrZmxvd3MsIGhvc3RlZCBvbiB0aGUgbjhuIENyZWF0b3IgSHViOyBob3N0aW5nIG9wdGlvbnMgZm9yIHRlYW1zLCBzb2xvIGFkdm9jYXRlcywgYW5kIGhpZ2gtc2VjdXJpdHkgdXNlcnMKLSAqKkNsZWFuLXJvb20gYWdlbnQgYXJjaGl0ZWN0dXJlIHJlZmVyZW5jZSoqIOKAlCBjYW5vbmljYWwgcGF0dGVybnMgZm9yIHNoYXJlZCB0b29sIHJlZ2lzdHJpZXMsIG9yY2hlc3RyYXRpb24sIG9wZXJhdG9yIGNvbnRyb2xzLCBhbmQgc2FmZXR5IGJvdW5kYXJpZXMgYWNyb3NzIE9wZW4gUGF3cyBwcm9qZWN0cwotICoqVHJhaW5pbmcgZGF0YXNldHMqKiDigJQgc2l4IEh1Z2dpbmdGYWNlIGRhdGFzZXRzIGNvdmVyaW5nIHN1cGVydmlzZWQgZmluZS10dW5pbmcsIGNvbnRpbnVhbCBwcmUtdHJhaW5pbmcsIHZpc3VhbCBRQSwgYWxpZ25tZW50IGZlZWRiYWNrLCByZWFzb25pbmcsIGFuZCB0b29sLXVzZSBkZW1vbnN0cmF0aW9ucwoKLS0tCgojIyBEb2N1bWVudGF0aW9uCgp8IFNlY3Rpb24gfCBXaGF0IGl0IGNvdmVycyB8CnwtLS0tLS0tLS18LS0tLS0tLS0tLS0tLS0tfAp8IFtLbm93bGVkZ2UvUkVBRE1FLm1kXShLbm93bGVkZ2UvUkVBRE1FLm1kKSB8IFdlYXZpYXRlIGNvbm5lY3Rpb24sIHNlYXJjaCBwYXR0ZXJucywgUkFHLCBzY2hlbWEsIGJlc3QgcHJhY3RpY2VzIHwKfCBbUHJlZGljdGlvbnMvUkVBRE1FLm1kXShQcmVkaWN0aW9ucy9SRUFETUUubWQpIHwgUHJlZGljdGlvbiBtb2RlbCB1c2FnZSwgYmF0Y2ggcHJvY2Vzc2luZywgc2NvcmUgY2xpcHBpbmcgfAp8IFtHZW5lcmF0aW9uL1JFQURNRS5tZF0oR2VuZXJhdGlvbi9SRUFETUUubWQpIHwgTGFuZ3VhZ2UgbW9kZWwgbG9hZGluZywgZ2VuZXJhdGlvbiBwYXJhbWV0ZXJzLCBrbm93biBsaW1pdGF0aW9ucyB8CnwgW0F1dG9tYXRpb24vUkVBRE1FLm1kXShBdXRvbWF0aW9uL1JFQURNRS5tZCkgfCBuOG4gaG9zdGluZyBvcHRpb25zLCB3b3JrZmxvdyBpbXBvcnQgZ3VpZGUgfAp8IFtJbmZyYXN0cnVjdHVyZS9SRUFETUUubWRdKEluZnJhc3RydWN0dXJlL1JFQURNRS5tZCkgfCBBZ2VudCBydW50aW1lIHBhdHRlcm5zLCB0b29sIHJlZ2lzdHJ5LCBzYWZldHkgYm91bmRhcmllcyB8CnwgW0NPTlRSSUJVVElORy5tZF0oQ09OVFJJQlVUSU5HLm1kKSB8IFBSIGd1aWRlbGluZXMsIHdyaXRpbmcgc3R5bGUsIHF1YWxpdHkgZ2F0ZXMgfAoKLS0tCgo8ZGV0YWlscz4KPHN1bW1hcnk+QXJjaGl0ZWN0dXJlIGRldGFpbDwvc3VtbWFyeT4KCiMjIyBLbm93bGVkZ2UgSW5mcmFzdHJ1Y3R1cmUgKFdlYXZpYXRlKQoKVGhlIGtub3dsZWRnZSBiYXNlIGhvbGRzIGFkdm9jYWN5IGNvbnRlbnQgc2NvcmVkIGFjcm9zcyAxMSBkaW1lbnNpb25zLiBUaGUgYENvbnRlbnRgIGNvbGxlY3Rpb24gaXMgdGhlIHByaW1hcnkgZW50cnkgcG9pbnQgZm9yIFJBRyBhbmQgc2VtYW50aWMgc2VhcmNoOgoKYGBgCkNvbnRlbnQK4pSc4pSA4pSAIHN1bW1hcnksIG1haW5fdGV4dCwgY29udGVudF90eXBlLCBzb3VyY2VfdXJsLCBkYXRlLCB0YWdzCuKUlOKUgOKUgCBzY29yZXMKICAgIOKUnOKUgOKUgCBnb29kX2Zvcl9hbmltYWxzLCBjdWx0dXJhbF9zZW5zaXRpdml0eSwgcmVsZXZhbmNlCiAgICDilJzilIDilIAgaW5zaWdodCwgdHJ1c3R3b3J0aGluZXNzLCBlbW90aW9uYWxfaW1wYWN0CiAgICDilJzilIDilIAgcmF0aW9uYWxpdHksIGluZmx1ZW5jZSwgYWxpZ25tZW50CiAgICDilJTilIDilIAgcHJlZGljdGVkX3BlcmZvcm1hbmNlLCBhdmVyYWdlX3Njb3JlCmBgYAoKVGhlIHJlY29tbWVuZGVkIHJldHJpZXZhbCBwYXR0ZXJuIGlzIHJldHJpZXZlLWFuZC1yZS1yYW5rOiBwdWxsIDIw4oCTMzAgcmVzdWx0cyBieSB2ZWN0b3Igc2ltaWxhcml0eSwgdGhlbiBzb3J0IGJ5IGNvbXBvc2l0ZSBzY29yZSBiZWZvcmUgcGFzc2luZyB0byB5b3VyIGFwcGxpY2F0aW9uIG9yIGdlbmVyYXRpb24gc3RlcC4KCiMjIyBQcmVkaWN0aW9uIE1vZGVscwoKTW9kZWxzIGFyZSB0ZXh0IHJlZ3Jlc3Npb24gcGlwZWxpbmVzIG9uIEh1Z2dpbmdGYWNlLiBPdXRwdXRzIGFyZSBjb250aW51b3VzIDDigJMxIHNjb3JlcyBidXQgbWF5IGV4Y2VlZCB0aGF0IHJhbmdlIG9uIG91dC1vZi1kaXN0cmlidXRpb24gaW5wdXRzIOKAlCBhbHdheXMgY2xpcCBiZWZvcmUgZG93bnN0cmVhbSB1c2UuIFR3byBtb2RlbCBmYW1pbGllcyBleGlzdDoKCi0gKipQZXJmb3JtYW5jZSBwcmVkaWN0aW9uKiog4oCUIHRyYWluZWQgb24gcmVhbC13b3JsZCBhZHZvY2FjeSBtZXRyaWNzIChzb2NpYWwgbWVkaWEgYW5kIGVtYWlsIG1hcmtldGluZyBhbmFseXRpY3MsIHNlbnRpbWVudCBhbmFseXNpcyBvZiByZXBsaWVzKQotICoqUHJlZmVyZW5jZSBwcmVkaWN0aW9uKiog4oCUIHRyYWluZWQgb24gaHVtYW4gYW5kIHN5bnRoZXRpYyBmZWVkYmFjayAoY3VsdHVyYWwgc2Vuc2l0aXZpdHksIGVtb3Rpb25hbCBpbXBhY3QsIHBlcnN1YXNpdmVuZXNzKQoKIyMjIExhbmd1YWdlIE1vZGVscwoKVGhlIDhCIG1vZGVscyBhcmUgTGxhbWEgMy4xIGJhc2Ugd2l0aCBjb250aW51YWwgcHJlLXRyYWluaW5nIG9uIGFuaW1hbCBhZHZvY2FjeSBjb250ZW50LCBmb2xsb3dlZCBieSBpbnN0cnVjdGlvbiB0dW5pbmcuIFR3byB2YXJpYW50czoKCi0gYG9wZW4tcGF3cy84Qi1iYXNlLW1vZGVsYCDigJQgcHJlLXRyYWluZWQgb25seSwgbm8gaW5zdHJ1Y3Rpb24gdHVuaW5nCi0gYG9wZW4tcGF3cy84Qi1pbnN0cnVjdC1jaGF0YCDigJQgY2hhdC10dW5lZCBpbnN0cnVjdCBtb2RlbAoKVGhlc2UgYXJlIHNtYWxsIG1vZGVscy4gVXNlIHRoZW0gd2hlbiBsb2NhbCBkZXBsb3ltZW50IG9uIGNvbnN1bWVyIGhhcmR3YXJlIGlzIGEgcmVxdWlyZW1lbnQuIEZvciBjb21wbGV4IHRhc2tzLCB1c2UgdGhlIG1vZGVscyB0aHJvdWdoIHRoZSBgb3Blbi1wYXdzYCBXZWF2aWF0ZSBSQUcgcGlwZWxpbmUgb3IgYSBsYXJnZXIgaG9zdGVkIG1vZGVsIHJvdXRlZCB0aHJvdWdoIE9wZW5Sb3V0ZXIuCgojIyMgQWdlbnQgSW5mcmFzdHJ1Y3R1cmUKClRoZSBjbGVhbi1yb29tIGFnZW50IGFyY2hpdGVjdHVyZSByZWZlcmVuY2UgZG9jdW1lbnRzIHRoZSBzaGFyZWQgcnVudGltZSBwYXR0ZXJuIHVzZWQgYWNyb3NzIE9wZW4gUGF3cyBwcm9qZWN0czogc2Nhbm5lciBpbmdlc3Rpb24g4oaSIHN0cnVjdHVyZWQgZXhwb3J0IOKGkiBwbGF0Zm9ybSBvcmNoZXN0cmF0aW9uIOKGkiB0b29sIHJlZ2lzdHJ5IOKGkiBodW1hbiByZXZpZXcgYmVmb3JlIGhpZ2gtaW1wYWN0IGFjdGlvbnMuIFNlZSBbSW5mcmFzdHJ1Y3R1cmUvUkVBRE1FLm1kXShJbmZyYXN0cnVjdHVyZS9SRUFETUUubWQpIGZvciB0aGUgZnVsbCBkZXNpZ24gYW5kIGN1cnJlbnQgaW1wbGVtZW50YXRpb24gdHJhY2tzLgoKPC9kZXRhaWxzPgoKLS0tCgojIyBDb250cmlidXRpbmcKClNlZSBbQ09OVFJJQlVUSU5HLm1kXShDT05UUklCVVRJTkcubWQpIGZvciB0aGUgZnVsbCBndWlkZS4gRG9jdW1lbnRhdGlvbiBjb250cmlidXRpb25zIGFyZSB3ZWxjb21lIOKAlCBwYXJ0aWN1bGFybHkgd29ya2luZyBjb2RlIGV4YW1wbGVzLCBpbnRlZ3JhdGlvbiBndWlkZXMgZm9yIGNvbW1vbiBwYXR0ZXJucyAoUkFHLCBiYXRjaCBpbmZlcmVuY2UsIG44biBhdXRvbWF0aW9ucyksIGFuZCBjb3JyZWN0aW9ucyB0byBrbm93biBsaW1pdGF0aW9ucy4gT25lIHRvcGljIHBlciBQUiwgdW5kZXIgMjAwIGxpbmVzIHdoZXJlIHBvc3NpYmxlLiBUaGUgQ0kgd29ya2Zsb3cgZW5mb3JjZXMgc3BlY2llc2lzdCBsYW5ndWFnZSBydWxlcyBhdXRvbWF0aWNhbGx5IHZpYSBbbm8tYW5pbWFsLXZpb2xlbmNlXShodHRwczovL2dpdGh1Yi5jb20vT3Blbi1QYXdzL25vLWFuaW1hbC12aW9sZW5jZSkg4oCUIGZpeCBmbGFnZ2VkIHRlcm1zIHJhdGhlciB0aGFuIGJ5cGFzc2luZyB0aGUgY2hlY2suCgotLS0KCiMjIExpY2Vuc2UgKyBBY2tub3dsZWRnbWVudHMKCltNSVQgTGljZW5zZV0oTElDRU5TRSkg4oCUIENvcHlyaWdodCAoYykgMjAyNSBPcGVuIFBhd3MuCgpCdWlsdCBvbiBbV2VhdmlhdGVdKGh0dHBzOi8vd2VhdmlhdGUuaW8pLCBbSHVnZ2luZ0ZhY2UgVHJhbnNmb3JtZXJzXShodHRwczovL2h1Z2dpbmdmYWNlLmNvL2RvY3MvdHJhbnNmb3JtZXJzLyksIFtMbGFtYSAzLjFdKGh0dHBzOi8vd3d3LmxsYW1hLmNvbS9kb2NzLykgKE1ldGEpLCBhbmQgW244bl0oaHR0cHM6Ly9kb2NzLm44bi5pbykuIERhdGFzZXRzIGFuZCBtb2RlbHMgaG9zdGVkIGF0IFtodWdnaW5nZmFjZS5jby9vcGVuLXBhd3NdKGh0dHBzOi8vaHVnZ2luZ2ZhY2UuY28vb3Blbi1wYXdzKS4KCi0tLQoKW0RvbmF0ZV0oaHR0cHM6Ly9vcGVucGF3cy5haS9kb25hdGUpIMK3IFtEaXNjb3JkXShodHRwczovL2Rpc2NvcmQuZ2cvb3BlbnBhd3MpIMK3IFtvcGVucGF3cy5haV0oaHR0cHM6Ly9vcGVucGF3cy5haSkgwrcgW1ZvbHVudGVlcl0oaHR0cHM6Ly9vcGVucGF3cy5haS92b2x1bnRlZXIpCgotLS0KCiMjIE1ldGFkYXRhCgpgYGB5YW1sCnRlY2hfc3RhY2s6IFtXZWF2aWF0ZSwgUHl0aG9uLCBIdWdnaW5nRmFjZSBUcmFuc2Zvcm1lcnMsIExsYW1hIDMuMSwgbjhuLCBNYXJrZG93bl0KcHJvamVjdF9zdGF0dXM6IHN0YWJsZQpkaWZmaWN1bHR5OiBpbnRlcm1lZGlhdGUKc2tpbGxfdGFnczogW3ZlY3Rvci1zZWFyY2gsIFJBRywgdGV4dC1yZWdyZXNzaW9uLCBsYW5ndWFnZS1tb2RlbHMsIHdvcmtmbG93LWF1dG9tYXRpb24sIGFuaW1hbC1hZHZvY2FjeSwgQUktaW5mcmFzdHJ1Y3R1cmVdCnJlbGF0ZWRfcmVwb3M6IFtwbGF0Zm9ybSwgZ2FyeSwgcHJvamVjdC1jb21wYXNzaW9uYXRlLWNvZGUsIGdyYXplLWNsaSwgY29udGV4dF0KYGBgCg==
+# Open Paws Documentation
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/Open-Paws/documentation)](https://github.com/Open-Paws/documentation/commits/main)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-open--paws-yellow)](https://huggingface.co/open-paws)
+
+---
+
+This repo is the developer documentation hub for Open Paws AI infrastructure — a purpose-built stack for animal advocacy organizations, researchers, and engineers. It covers the full AI stack: a Weaviate vector knowledge base, HuggingFace text regression prediction models, 8B language models, n8n workflow automations, and a clean-room agent architecture reference. If you are building advocacy tools, campaign automations, or fine-tuned models using Open Paws resources, start here.
+
+> [!NOTE]
+> This project is part of the [Open Paws](https://openpaws.ai) ecosystem — AI infrastructure for the animal liberation movement. [Explore the full platform →](https://github.com/Open-Paws)
+
+Animal advocacy organizations are under-resourced relative to the industries they challenge. This documentation exists to lower the barrier for developers and technically capable advocates to build AI tools that actually move the needle — not adapted from generic use cases, but designed from the ground up for investigative research, campaign evaluation, and movement coordination.
+
+---
+
+## Architecture
+
+```mermaid
+graph TD
+    A[Your Application] --> B[Knowledge\nWeaviate Vector DB]
+    A --> C[Predictions\nHuggingFace Regression Models]
+    A --> D[Generation\n8B Language Models]
+    A --> E[Automation\nn8n Workflow Templates]
+    A --> F[Infrastructure\nClean-Room Agent Runtime]
+
+    B --> G[(Advocacy Content\nArticles · Reports · Campaigns)]
+    C --> H[(HuggingFace\nopen-paws collection)]
+    D --> H
+    E --> I[(n8n Creator Hub\nWorkflow Templates)]
+```
+
+Each section is self-contained: connection details, working code samples, and known limitations live together in one place.
+
+---
+
+## Quickstart
+
+This repo contains no application code — there is nothing to build or deploy. Browse the section that matches your use case:
+
+```bash
+# Clone to browse locally
+git clone https://github.com/Open-Paws/documentation.git
+cd documentation
+
+# Connect to the Weaviate knowledge base (requires your own OpenAI API key)
+# See Knowledge/README.md for full connection details
+export WEAVIATE_URL="https://larnd9rle1zwapsdcqw.c0.us-east1.gcp.weaviate.cloud"
+export WEAVIATE_API_KEY="<read-only key in Knowledge/README.md>"
+export OPENAI_APIKEY="<your key>"
+
+# Run a prediction model (requires transformers)
+pip install transformers torch
+python -c "
+from transformers import pipeline
+p = pipeline('text-classification', model='open-paws/perceived_trustworthiness_prediction', return_all_scores=True)
+print(p('Animals deserve to live free from exploitation.'))
+"
+```
+
+See [Knowledge/README.md](Knowledge/README.md), [Predictions/README.md](Predictions/README.md), and [Generation/README.md](Generation/README.md) for complete working examples.
+
+---
+
+## Features
+
+- **Weaviate vector knowledge base** — read-only public access to a vector-graph database of advocacy content (articles, reports, campaign materials, investigation findings) with per-document scoring across trustworthiness, insight, relevance, predicted performance, and more
+- **Vector, hybrid, and filtered search** — query the knowledge base with semantic similarity, keyword weighting, and score-based filters; full RAG support via Weaviate's grouped-task generation
+- **Text regression prediction models** — HuggingFace pipeline-compatible models scoring advocacy messages on performance metrics (social media analytics, sentiment) and human-preference dimensions (cultural sensitivity, emotional impact, persuasiveness)
+- **8B advocacy language models** — Llama 3.1–based models continually pre-trained and instruction-tuned on animal advocacy content; optimized for local and low-memory deployment
+- **n8n workflow templates** — ready-to-import automation templates for common advocacy workflows, hosted on the n8n Creator Hub; hosting options for teams, solo advocates, and high-security users
+- **Clean-room agent architecture reference** — canonical patterns for shared tool registries, orchestration, operator controls, and safety boundaries across Open Paws projects
+- **Training datasets** — six HuggingFace datasets covering supervised fine-tuning, continual pre-training, visual QA, alignment feedback, reasoning, and tool-use demonstrations
+
+---
+
+## Documentation
+
+| Section | What it covers |
+|---------|---------------|
+| [Knowledge/README.md](Knowledge/README.md) | Weaviate connection, search patterns, RAG, schema, best practices |
+| [Predictions/README.md](Predictions/README.md) | Prediction model usage, batch processing, score clipping |
+| [Generation/README.md](Generation/README.md) | Language model loading, generation parameters, known limitations |
+| [Automation/README.md](Automation/README.md) | n8n hosting options, workflow import guide |
+| [Infrastructure/README.md](Infrastructure/README.md) | Agent runtime patterns, tool registry, safety boundaries |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | PR guidelines, writing style, quality gates |
+
+---
+
+<details>
+<summary>Architecture detail</summary>
+
+### Knowledge Infrastructure (Weaviate)
+
+The knowledge base holds advocacy content scored across 11 dimensions. The `Content` collection is the primary entry point for RAG and semantic search:
+
+```
+Content
+├── summary, main_text, content_type, source_url, date, tags
+└── scores
+    ├── good_for_animals, cultural_sensitivity, relevance
+    ├── insight, trustworthiness, emotional_impact
+    ├── rationality, influence, alignment
+    └── predicted_performance, average_score
+```
+
+The recommended retrieval pattern is retrieve-and-re-rank: pull 20–30 results by vector similarity, then sort by composite score before passing to your application or generation step.
+
+### Prediction Models
+
+Models are text regression pipelines on HuggingFace. Outputs are continuous 0–1 scores but may exceed that range on out-of-distribution inputs — always clip before downstream use. Two model families exist:
+
+- **Performance prediction** — trained on real-world advocacy metrics (social media and email marketing analytics, sentiment analysis of replies)
+- **Preference prediction** — trained on human and synthetic feedback (cultural sensitivity, emotional impact, persuasiveness)
+
+### Language Models
+
+The 8B models are Llama 3.1 base with continual pre-training on animal advocacy content, followed by instruction tuning. Two variants:
+
+- `open-paws/8B-base-model` — pre-trained only, no instruction tuning
+- `open-paws/8B-instruct-chat` — chat-tuned instruct model
+
+These are small models. Use them when local deployment on consumer hardware is a requirement. For complex tasks, use the models through the `open-paws` Weaviate RAG pipeline or a larger hosted model routed through OpenRouter.
+
+### Agent Infrastructure
+
+The clean-room agent architecture reference documents the shared runtime pattern used across Open Paws projects: scanner ingestion → structured export → platform orchestration → tool registry → human review before high-impact actions. See [Infrastructure/README.md](Infrastructure/README.md) for the full design and current implementation tracks.
+
+</details>
+
+---
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide. Documentation contributions are welcome — particularly working code examples, integration guides for common patterns (RAG, batch inference, n8n automations), and corrections to known limitations. One topic per PR, under 200 lines where possible. The CI workflow enforces speciesist language rules automatically via [no-animal-violence](https://github.com/Open-Paws/no-animal-violence) — fix flagged terms rather than bypassing the check.
+
+---
+
+## License + Acknowledgments
+
+[MIT License](LICENSE) — Copyright (c) 2025 Open Paws.
+
+Built on [Weaviate](https://weaviate.io), [HuggingFace Transformers](https://huggingface.co/docs/transformers/), [Llama 3.1](https://www.llama.com/docs/) (Meta), and [n8n](https://docs.n8n.io). Datasets and models hosted at [huggingface.co/open-paws](https://huggingface.co/open-paws).
+
+---
+
+[Donate](https://openpaws.ai/donate) · [Discord](https://discord.gg/openpaws) · [openpaws.ai](https://openpaws.ai) · [Volunteer](https://openpaws.ai/volunteer)
+
+---
+
+## Metadata
+
+```yaml
+tech_stack: [Weaviate, Python, HuggingFace Transformers, Llama 3.1, n8n, Markdown]
+project_status: stable
+difficulty: intermediate
+skill_tags: [vector-search, RAG, text-regression, language-models, workflow-automation, animal-advocacy, AI-infrastructure]
+related_repos: [platform, gary, project-compassionate-code, graze-cli, context]
+```
