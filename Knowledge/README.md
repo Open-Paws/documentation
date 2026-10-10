@@ -9,8 +9,11 @@ For complete documentation, visit the [Weaviate Documentation](https://weaviate.
 ```
 REST Endpoint: https://larnd9rle1zwapsdcqw.c0.us-east1.gcp.weaviate.cloud
 gRPC Endpoint: https://grpc-larnd9rle1zwapsdcqw.c0.us-east1.gcp.weaviate.cloud
-ReadOnly API Key: Z0lQNXFDVnFnRmV6OTZRdF9KRVUwVzFEdjgxaHIvVFB3dkFyV0JqSnFxWFJYMWhqM0FTQ0NncU14S2hrPV92MjAw
+ReadOnly API Key: <YOUR_READ_ONLY_API_KEY>
 ```
+
+Get a read-only key from the Open Paws team, or set `WEAVIATE_API_KEY` as an environment variable (see [Required Environment Variables](#required-environment-variables) below).
+
 ## Required Environment Variables
 
 | Variable | Required | Description |
@@ -263,15 +266,16 @@ refined_response = content.generate.near_text(
     limit=10
 )
 ```
+
 ## Troubleshooting
 
 ### Authentication Errors
 
 If connection attempts fail:
 
-- Verify that `WEAVIATE_URL` is configured correctly.
-- Verify that `WEAVIATE_API_KEY` is present in your environment.
-- Verify that `OPENAI_APIKEY` is configured when using OpenAI-powered features.
+- Check that `WEAVIATE_URL` is configured correctly.
+- Ensure `WEAVIATE_API_KEY` is present in your environment.
+- Verify `OPENAI_APIKEY` is configured when using OpenAI-powered features.
 
 ### Empty Search Results
 
@@ -281,6 +285,7 @@ If searches return no useful results:
 - Increase the result limit.
 - Test hybrid search instead of vector-only search.
 - Verify that the target collection contains indexed data.
+
 ### OpenAI Integration Errors
 
 Common causes include:
